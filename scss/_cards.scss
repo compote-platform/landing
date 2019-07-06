@@ -1,0 +1,103 @@
+
+.explanation-header {
+	margin-top: 30pt;
+	font-family: "Avenir-Black";
+	font-size: 40pt;
+	// line-height: 24pt;
+	color: $textgray;
+	letter-spacing: 0.0pt;
+}
+
+.explanation-solution {
+	display: inline-block;
+	margin-top: 45pt;
+	margin-bottom: 15pt;
+	position: relative;
+	font-family: "Avenir-Medium";
+	font-size: 15pt;
+	letter-spacing: 0.22pt;
+	color: #FFFFFF;
+	height: 150pt;
+}
+
+.explanation-solution-bold {
+	font-family: "Avenir-Black";
+}
+
+.explanation-solution-background {
+	max-width: 1000pt;
+	height: 150pt;
+	background-image: url('/img/bgSolution@3x.png');
+	// background-attachment: local;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat; 
+	background-color: transparent;
+}
+
+
+
+.explanation-card {
+	margin-top: 30pt;
+	margin-bottom: 30pt;
+	margin-left: 10pt;
+	margin-right: 10pt;
+	height: 400pt;
+	// max-width: 1000pt;
+	box-sizing: content-box;
+}
+
+.explanation-card-image {
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	position: relative;
+	box-sizing: content-box;
+	// width: 600pt;
+	// height: 400pt;
+	// width: auto;
+	display: inline-block;
+	max-width: 600pt;
+}
+
+.explanation-card-text-block {
+	position: relative;
+	box-sizing: content-box;
+	max-width: 400pt;
+	display: inline-block;
+}
+
+.explanation-card-text-step {
+	text-transform: uppercase;
+	font-family: "Avenir-Black";
+	font-size: 15pt;
+	color: $textgray;
+	letter-spacing: 0.0pt;
+}
+
+.explanation-card-text-message {
+	font-family: "Avenir-Black";
+	font-size: 25pt;
+	color: $textgray;
+	letter-spacing: 0.0pt;	
+}
+
+.explanation-card-text-description {
+	font-family: "Avenir-Medium";
+	font-size: 18pt;
+	line-height: 24pt;
+	color: $textgray;
+	letter-spacing: 0.0pt;		
+}
+
+
+.explanation-background {
+	background-image: url('/img/bg.png');
+	// background-attachment: local;
+	// the above is shit
+	background-position: center top;
+	background-size: cover;
+	background-repeat: no-repeat; 
+	background-color: transparent;
+
+	// height: 1696pt;
+}
