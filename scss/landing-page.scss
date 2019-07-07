@@ -1,24 +1,5 @@
-// Core variables and mixins
-@import "variables.scss";
+@import "_variables.scss";
 
+@import "_utility.scss";
 @import "_colors.scss";
-@import "_top.scss";
-@import "_cards.scss";
-@import "_call_to_action.scss";
-
-
-
-
-
-// @import "mixins.scss";
-// Global CSS
-// @import "global.scss";
-// Components
-// @import "masthead.scss";
-// @import "showcase.scss";
-// @import "icons.scss";
-// @import "testimonials.scss";
-// @import "call-to-action.scss";
-// @import "footer.scss";
-
-// @import "top.scss";
+@import "_main.scss";
