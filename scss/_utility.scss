@@ -20,6 +20,9 @@
     flex: 1 1 auto;
 }
 
+.drop-shadow {
+	filter: drop-shadow(0 0 10px #e0e0e0);
+}
 
 // card border and background erasure
 .opaque-no-border {
