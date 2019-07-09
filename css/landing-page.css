@@ -26,9 +26,13 @@
   flex: 1 1 auto;
 }
 
-.opaque-no-border, .increase-sales-card, .question-card, .solution-card, .image-card, .explanation-card {
+.opaque-no-border, .increase-sales-card, .devices-image-card, .question-card, .solution-card, .image-card, .explanation-card, .explanation-card .card-header {
   background-color: rgba(255, 255, 255, 0) !important;
   border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='4.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .watermelon {
@@ -72,13 +76,162 @@
   background-repeat: no-repeat;
 }
 
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='4.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+@media screen and (max-width: 425px) {
+  .navbar-brand {
+    padding-top: 4pt;
+    padding-left: 0pt;
+  }
 }
 
 .increase-sales-card {
-  height: 300pt;
-  margin-top: 100pt;
+  height: 300px;
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+.devices-image-card {
+  margin-top: 80px;
+}
+
+.question-card {
+  height: 70px;
+}
+
+.question-card .card-img {
+  height: 50px;
+  width: 50px;
+}
+
+.question-card .question-img {
+  height: 50px;
+  width: 50px;
+}
+
+.question-card .card-body {
+  padding: 10px 10px 10px 10px;
+}
+
+.question-card .card-title {
+  font-family: Avenir-Heavy;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.22px;
+  color: #393E41;
+  margin: 0;
+}
+
+.welcome-container {
+  margin-bottom: 80px;
+}
+
+.solution-background {
+  background-image: url("/img/zeplin/bgSolution@3x.png");
+  background-position: center top 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+}
+
+@media screen and (max-width: 425px) {
+  .solution-background {
+    background-image: url("/img/zeplin/mobile/bgSolution@3x.png");
+  }
+}
+
+.solution-card .card-text {
+  font-family: Avenir-Medium;
+  font-size: 18px;
+  letter-spacing: 0.22px;
+  line-height: 25px;
+  color: #ffffff;
+  margin-top: -10px;
+}
+
+.solution-card .bold {
+  font-family: Avenir-Black;
+}
+
+.how-it-works {
+  margin-top: 50px;
+}
+
+.explanation-card .card-header .card-title {
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.explanation-card .card-title {
+  font-family: Avenir-Black;
+  color: #494949;
+  font-size: 25px;
+  letter-spacing: 0.0px;
+}
+
+.explanation-card .card-text {
+  font-family: Avenir-Medium;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.0px;
+  color: #494949;
+}
+
+.navbar-brand {
+  padding-left: 25pt;
+}
+
+.about-us {
+  text-transform: uppercase;
+  font-family: Avenir-Black;
+  font-size: 12px;
+  letter-spacing: 1.18px;
+  color: #ffffff;
+}
+
+.sign-up-for-a-closed-beta, .sign-up-for-a-closed-beta-watermelon, .learn-more {
+  text-transform: uppercase;
+  font-family: Avenir-Black;
+  font-size: 12px;
+  letter-spacing: 1.18px;
+  border-radius: 25px;
+  color: #393E41;
+  background-color: #ffffff;
+}
+
+.marketing-title, .marketing-title-condensed {
+  font-family: Avenir-Black;
+  font-size: 40px;
+  letter-spacing: 0.8px;
+  line-height: 55px;
+  color: #494949;
+  margin-bottom: 30px;
+}
+
+.marketing-title-condensed {
+  letter-spacing: 0.0px;
+}
+
+.sign-up-for-a-closed-beta-watermelon {
+  height: 50px;
+  font-size: 15px;
+  line-height: 37px;
+  letter-spacing: 0.18pt;
+  width: 300px;
+  color: #ffffff;
+  background-color: #ed4f62;
+}
+
+.learn-more {
+  height: 50px;
+  font-size: 15px;
+  line-height: 37px;
+  letter-spacing: 0.18pt;
+  margin-left: 20px;
+  width: 200px;
+  color: #393E41;
+  background-color: #ffffff;
+  -webkit-filter: drop-shadow(0 0 10px #e0e0e0);
+  filter: drop-shadow(0 0 10px #e0e0e0);
 }
 
 /*
