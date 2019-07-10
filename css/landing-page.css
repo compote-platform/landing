@@ -59,14 +59,6 @@
   display: block;
 }
 
-@media screen and (max-width: 425px) {
-  .top-background {
-    background-image: url("/img/zeplin/landingBgMainMobile@3x.png");
-    width: 100%;
-    height: 1000px;
-  }
-}
-
 .explanation-background {
   background-image: url("/img/zeplin/bg@3x.png");
   background-position: center top 100px;
@@ -110,6 +102,10 @@
   color: #ffffff;
 }
 
+.page-footer .copyright {
+  text-align: right;
+}
+
 .page-footer .footer-img {
   margin-left: 5px;
   margin-right: 5px;
@@ -132,13 +128,6 @@
 .logo {
   height: 40px;
   width: 158px;
-}
-
-@media screen and (max-width: 425px) {
-  .navbar-brand {
-    padding-top: 4pt;
-    padding-left: 0pt;
-  }
 }
 
 .increase-sales-card {
@@ -186,6 +175,14 @@
   margin-bottom: 80px;
 }
 
+.welcome-container .marketing-title, .welcome-container .marketing-title-condensed {
+  text-align: left;
+}
+
+.welcome-container .card-body {
+  text-align: justify;
+}
+
 .solution-background {
   background-image: url("/img/zeplin/bgSolution@3x.png");
   background-position: center top 25px;
@@ -193,12 +190,6 @@
   background-repeat: no-repeat;
   width: 100%;
   height: 200px;
-}
-
-@media screen and (max-width: 425px) {
-  .solution-background {
-    background-image: url("/img/zeplin/mobile/bgSolution@3x.png");
-  }
 }
 
 .solution-card .card-text {
@@ -345,6 +336,97 @@
   padding-bottom: 50px;
 }
 
+.btn:hover {
+  color: #ffffff;
+}
+
+.white-button:hover {
+  color: #494949;
+}
+
+@media screen and (max-width: 425px) {
+  .sounds-interesting .form-group {
+    width: 300px;
+    padding-right: 0;
+  }
+  .navbar-brand {
+    padding-top: 4pt;
+    padding-left: 0pt;
+  }
+  .top-background {
+    background-image: url("/img/zeplin/landingBgMainMobile@3x.png");
+    width: 100%;
+    height: 1000px;
+  }
+  .solution-background {
+    background-image: url("/img/zeplin/mobile/bgSolution@3x.png");
+    background-size: cover;
+    height: 331px;
+  }
+  .solution-card {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .solution-card .card-text {
+    font-size: 16px;
+    letter-spacing: 0.19px;
+  }
+  .page-footer .list-group-horizontal {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .page-footer .copyright {
+    text-align: center;
+  }
+  .welcome-container .marketing-title, .welcome-container .marketing-title-condensed {
+    font-family: Avenir-Black;
+    font-size: 28px;
+    letter-spacing: 0.0px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .welcome-container .increase-sales-card .card-body {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+  .welcome-container .devices-image-card {
+    margin-top: 60px;
+  }
+  .welcome-container .increase-sales-card {
+    margin-top: 50px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .welcome-container .sign-up-for-a-closed-beta-watermelon {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .welcome-container .learn-more {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .navbar-brand {
+    margin-right: -10px;
+  }
+  .solution-background {
+    height: 300px;
+  }
+  .solution-background .marketing-title-condensed {
+    margin-bottom: -12px;
+  }
+  .solution-background .solution-card {
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -380,56 +462,3 @@
 .container .card-group {
   padding-top: 50px;
 }
-
-.step1 {
-  background-image: url("/img/zeplin/step1@3x.png");
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.btn:hover {
-  color: #ffffff;
-}
-
-.white-button:hover {
-  color: #494949;
-}
-
-/*
-	footer
-
-	// background-image: url('/img/zeplin/blue@3x.png');
-	
-	desktop
-		4 cols
-			compote
-				about us
-				t&c
-			contact
-				email
-				address
-			get the app
-			follow us
-		splitter
-		brand / copyright / language
-
-	mobile
-		2 cols
-			compote
-				about us
-				t&c
-			contact
-				email
-				address
-		splitter
-		get the app
-		follow
-		copyright
-		brand / language
-
-
-	desktop
-
-*/

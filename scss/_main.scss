@@ -17,15 +17,6 @@ body {
 	display: block;
 }
 
-// mobile
-@media screen and (max-width: $mobile-breakpoint) {
-	.top-background {
-		background-image: url('/img/zeplin/landingBgMainMobile@3x.png');
-		width: 100%;
-		height: 1000px;
-	}
-}
-
 .explanation-background {
 	background-image: url('/img/zeplin/bg@3x.png');
 	background-position: center top 100px;
@@ -70,6 +61,7 @@ body {
 
 	.copyright {
 		@extend .footer-link;
+		text-align: right;
 	}
 
 	.footer-img {
@@ -101,14 +93,6 @@ body {
 .logo {
 	height: 40px;
 	width: 158px;
-}
-
-// mobile
-@media screen and (max-width: $mobile-breakpoint) {
-	.navbar-brand {
-		padding-top: 4pt;
-		padding-left: 0pt;
-	}
 }
 
 .increase-sales-card {
@@ -160,6 +144,14 @@ body {
 
 .welcome-container {
 	margin-bottom: 80px;
+
+	.marketing-title {
+		text-align: left;
+	}
+
+	.card-body {
+		text-align: justify;
+	}
 }
 
 // desktop
@@ -170,13 +162,6 @@ body {
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 200px;
-}
-
-// mobile
-@media screen and (max-width: $mobile-breakpoint) {
-	.solution-background {
-		background-image: url('/img/zeplin/mobile/bgSolution@3x.png');
-	}
 }
 
 .solution-card {
@@ -199,8 +184,6 @@ body {
 .how-it-works {
 	margin-top: 50px;
 }
-
-
 
 .image-card {
 	@extend .opaque-no-border;
@@ -240,14 +223,6 @@ body {
 		line-height: 24px;
 		letter-spacing: 0.0px;
 		color: $textgray;
-	}
-}
-
-@media screen and (max-width: $mobile-breakpoint) {
-	.explanation-card {
-		.image-card {
-			// width: ;
-		}
 	}
 }
 
@@ -358,6 +333,136 @@ body {
 	}
 } 
 
+.btn:hover {
+    color: $white;
+}
+
+.white-button:hover {
+	color: $textgray;
+}
+
+// mobile
+@media screen and (max-width: $mobile-breakpoint) {
+	.sounds-interesting {
+		.form-group {
+			width: 300px;
+			padding-right: 0;
+			// padding-left: 10px;
+			// padding-right: 10px;
+		}
+	}
+	.navbar-brand {
+		padding-top: 4pt;
+		padding-left: 0pt;
+	}
+
+	.explanation-card {
+		.image-card {
+			// width: ;
+		}
+	}
+
+	.top-background {
+		background-image: url('/img/zeplin/landingBgMainMobile@3x.png');
+		width: 100%;
+		height: 1000px;
+	}
+
+	.solution-background {
+		background-image: url('/img/zeplin/mobile/bgSolution@3x.png');
+		background-size: cover;
+		height: 331px;
+	}
+
+	.solution-card {
+		padding-top: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		// width: 275px;
+		.card-text {
+			font-size: 16px;
+			letter-spacing: 0.19px;
+		}
+	}
+
+	.page-footer {
+		.list-group-horizontal {
+			justify-content: center;
+		}
+		.copyright {
+			text-align: center;
+		}
+	}
+
+	.welcome-container {
+		.marketing-title {
+			font-family: Avenir-Black;
+			font-size: 28px;
+			letter-spacing: 0.0px;
+			line-height: 40px;
+			text-align: center;
+			// margin-bottom: 30px;
+		}
+		.increase-sales-card {
+			.card-body {
+				padding-left: 0;
+				padding-right: 0;
+				text-align: center;
+			}
+		}
+		.devices-image-card {
+			margin-top: 60px;
+		}
+		.increase-sales-card {
+			margin-top: 50px;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		
+		.sign-up-for-a-closed-beta-watermelon {
+			padding-left: 0;
+			padding-right: 0;
+			// width: 300px;
+		}
+		.learn-more {
+			margin-left: 0;
+			margin-top: 20px;
+			// padding-left: 0;
+			// padding-right: 0;
+		}
+	}
+}
+
+// tiny mobile
+@media screen and (max-width: $small-mobile-breakpoint) {
+	.navbar-brand {
+		margin-right: -10px;
+	}
+	.solution-background {
+		height: 300px;
+
+		.marketing-title-condensed {
+			margin-bottom: -12px;
+		}
+
+		.solution-card {
+			padding-top: 15px;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
+
+	// .solution-card {
+	// 	padding-top: 20px;
+	// 	padding-left: 20px;
+	// 	padding-right: 20px;
+	// 	// width: 275px;
+	// 	.card-text {
+	// 		font-size: 16px;
+	// 		letter-spacing: 0.19px;
+	// 	}
+	// }
+}
 
 .container {
   width: 100%;
@@ -391,63 +496,8 @@ body {
   }
 }
 
-
 .container {
-
-
 	.card-group {
 		padding-top: 50px;
 	}
 }
-
-.step1 {
-	background-image:url("/img/zeplin/step1@3x.png");
-	width:100%;
-	height:100%;
-	background-repeat:no-repeat;
-	background-size:cover;
-}
-
-.btn:hover {
-    color: $white;
-}
-
-.white-button:hover {
-	color: $textgray;
-}
-/*
-	footer
-
-	// background-image: url('/img/zeplin/blue@3x.png');
-	
-	desktop
-		4 cols
-			compote
-				about us
-				t&c
-			contact
-				email
-				address
-			get the app
-			follow us
-		splitter
-		brand / copyright / language
-
-	mobile
-		2 cols
-			compote
-				about us
-				t&c
-			contact
-				email
-				address
-		splitter
-		get the app
-		follow
-		copyright
-		brand / language
-
-
-	desktop
-
-*/
