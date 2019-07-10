@@ -35,7 +35,7 @@
           <a class="btn about-us" href="#">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="btn sign-up-for-a-closed-beta" href="#">Sign up for a closed beta</a>
+          <a class="btn sign-up-for-a-closed-beta white-button" href="#sounds_interesting">Sign up for a closed beta</a>
         </li>
       </ul>
     </div>
@@ -48,8 +48,8 @@
       <div class="col increase-sales-card card-last">
         <div class="card-body text-justify">
           <h5 class="card-title text-left marketing-title">Increase <span class="watermelon">sales</span> by making<br/>others compete for your products</h5>
-          <a href="#" class="btn sign-up-for-a-closed-beta-watermelon">Sign up for a closed beta</a>
-          <a href="#" class="btn learn-more">Learn more</a>
+          <a href="#sounds_interesting" class="btn sign-up-for-a-closed-beta-watermelon">Sign up for a closed beta</a>
+          <a href="#how_it_works" class="btn learn-more white-button">Learn more</a>
         </div>
       </div>
       <!-- Devices preview card -->
@@ -106,56 +106,60 @@
       </div>
     </div>
     <!-- How it works -->
-    <div class="text-center how-it-works">
+    <div id="how_it_works" class="text-center how-it-works">
       <h1 class="marketing-title-condensed">How it <span class="midblue">Works</span>?</h1>
     </div>
     <!-- Actual cards -->
-    <div class="card-group">
-      <div class="card explanation-card card-last align-self-center">
-        <div class="card-header">
-          <h5 class="card-title">Step 1</h5>
+    <div class="container"> 
+      <div class="card-group">
+        <div class="card explanation-card card-last align-self-center">
+          <div class="card-header">
+            <h5 class="card-title">Step 1</h5>
+            <h3 class="card-subtitle">You pick <span class="watermelon">products</span></h3>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Create a campaign with your goods and services to sell.</br>All we need is a description, a promo image and stock info - as easy as that.</p>
+          </div>
         </div>
-        <div class="card-body">
-          <h3 class="card-title">You pick <span class="watermelon">products</span></h3>
-          <p class="card-text">Create a campaign with your goods and services to sell.</br>All we need is a description, a promo image and stock info - as easy as that.</p>
+        <div class="card image-card card-first">
+          <img class="card-img" src="/img/zeplin/step1@3x.png" alt="Step 1">
+        </div>
+      </div> 
+      <div class="card-group">
+        <div class="card image-card card-first">
+          <img class="card-img" src="/img/zeplin/step2@3x.png" alt="Step 1">
+        </div>
+        <div class="card explanation-card card-last align-self-center">
+          <div class="card-header opaque-no-border">
+            <h5 class="card-title">Step 2</h5>
+            <h3 class="card-subtitle">People <span class="watermelon">compete</span> for it</h3>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Let the Compote start! We will create contests with your products as the grand prizes. Each contest is a guaranteed sale, every contestant is your potential customer.</p>
+          </div>
         </div>
       </div>
-      <div class="card image-card card-first">
-        <img class="card-img" src="/img/zeplin/step1@3x.png" alt="Step 1">
+      <div class="card-group">
+        <div class="card explanation-card card-last align-self-center">
+          <div class="card-header opaque-no-border">
+            <h5 class="card-title">Step 3</h5>
+            <h3 class="card-subtitle">Your <span class="watermelon">sales & audience</span> grow</h3>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Once the contest is finished - you have a deal. Deliver prizes to winners and don't stop just there! As a bonus, you can provide consolation prizes & special offers for the non-winners to boost your audience.</p>
+          </div>
+        </div>
+        <div class="card image-card card-first">
+          <img class="card-img" src="/img/zeplin/step3@3x.png" alt="Step 1">
+        </div>
       </div>
     </div>
-    <div class="card-group">
-      <div class="card image-card card-first">
-        <img class="card-img" src="/img/zeplin/step2@3x.png" alt="Step 1">
-      </div>
-      <div class="card explanation-card card-last align-self-center">
-        <div class="card-header opaque-no-border">
-          <h5 class="card-title">Step 2</h5>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">People <span class="watermelon">compete</span> for it</h3>
-          <p class="card-text">Let the Compote start! We will create contests with your products as the grand prizes. Each contest is a guaranteed sale, every contestant is your potential customer.</p>
-        </div>
-      </div>
-    </div>
-    <div class="card-group">
-      <div class="card explanation-card card-last align-self-center">
-        <div class="card-header opaque-no-border">
-          <h5 class="card-title">Step 3</h5>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">Your <span class="watermelon">sales & audience</span> grow</h3>
-          <p class="card-text">Once the contest is finished - you have a deal. Deliver prizes to winners and don't stop just there! As a bonus, you can provide consolation prizes & special offers for the non-winners to boost your audience.</p>
-        </div>
-      </div>
-      <div class="card image-card card-first">
-        <img class="card-img" src="/img/zeplin/step3@3x.png" alt="Step 1">
-      </div>
-    </div>
+    
+    
     <!-- Sounds interesting give it a try -->
-    <div class="text-center no-gutters sounds-interesting">
+    <div class="text-center no-gutters sounds-interesting" id="sounds_interesting">
       <h1 class="marketing-title-condensed">Sounds <span class="midblue">interesting</span>? Give it a <span class="watermelon">try</span>!</h1>
-      <p>There's no price tag attached yet.</p>
+      <p class="marketing-text">There's no price tag attached, <span class="watermelon">yet</span>.</p>
       <form class="form-inline justify-content-center">
         <div class="form-group">
           <input type="text" class="form-control" id="nameinput" placeholder="Your name">
@@ -190,7 +194,7 @@
           <h5 class="text-uppercase mt-3 mb-4">Contact</h5>
           <ul class="list-unstyled">
             <li>
-              <a class="footer-link" href="#!">contact@compote.xyz</a>
+              <a class="footer-link" href="mailto:contact@compote.xyz">contact@compote.xyz</a>
             </li>
             <li>
               <a class="footer-link" href="#!">COMPOTE SA Rte Antique Stationery 190 CH - 1723 Marly</a>
@@ -216,6 +220,8 @@
           <h5 class="text-uppercase mt-3 mb-4">Follow Us</h5>
 
           <ul class="list-group list-group-horizontal list-unstyled">
+            <!-- use class below for mobile -->
+            <!-- justify-content-center  -->
             <li>
               <a href="#!">
                 <img src="/img/zeplin/facebook@3x.png" class="footer-img d-inline-block align-top" alt="Facebook">
@@ -244,7 +250,7 @@
       <div class="row splitter">
       </div>
       <!-- Brand / Copyright -->
-      <div class="row justify-content-center" style="padding-top: 30px;">
+      <div class="row footer-brand-row justify-content-center">
         <div class="col-md-4">
           <img src="/img/zeplin/logo@3x.png" class="logo d-inline-block align-top" alt="Compote">
         </div>

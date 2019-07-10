@@ -82,13 +82,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 283px;
   padding-left: 0;
   padding-right: 0;
 }
 
 .page-footer {
   padding-top: 30px;
+  background-color: #2174A6;
 }
 
 .page-footer .container-fluid {
@@ -121,6 +121,12 @@
   height: 1px;
   opacity: 20%;
   background-color: #ffffff;
+  margin-top: 30px;
+}
+
+.page-footer .footer-brand-row {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .logo {
@@ -146,6 +152,10 @@
 }
 
 .question-card {
+  height: 70px;
+}
+
+.question-card .card-horizontal {
   height: 70px;
 }
 
@@ -208,16 +218,27 @@
   margin-top: 50px;
 }
 
+.explanation-card .card-header {
+  padding-bottom: 15px;
+}
+
 .explanation-card .card-header .card-title {
   text-transform: uppercase;
+  font-family: Avenir-Black;
+  color: #494949;
+  letter-spacing: 0.0px;
   font-size: 15px;
 }
 
-.explanation-card .card-title {
+.explanation-card .card-header .card-subtitle {
   font-family: Avenir-Black;
   color: #494949;
   font-size: 25px;
   letter-spacing: 0.0px;
+}
+
+.explanation-card .card-body {
+  padding-top: 0px;
 }
 
 .explanation-card .card-text {
@@ -295,6 +316,15 @@
   margin-top: 50px;
 }
 
+.sounds-interesting .marketing-text {
+  font-family: Avenir-Medium;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.0px;
+  color: #494949;
+  margin-bottom: 40px;
+}
+
 .sounds-interesting .marketing-title-condensed {
   padding-top: 60px;
 }
@@ -313,6 +343,58 @@
 
 .sounds-interesting .form-inline {
   padding-bottom: 50px;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+.container .card-group {
+  padding-top: 50px;
+}
+
+.step1 {
+  background-image: url("/img/zeplin/step1@3x.png");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn:hover {
+  color: #ffffff;
+}
+
+.white-button:hover {
+  color: #494949;
 }
 
 /*
