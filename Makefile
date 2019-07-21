@@ -1,23 +1,33 @@
 
-deploy:
-# 	make a structure
+archive:
+	# 	make a structure
 	mkdir ./deployment
 	mkdir ./deployment/css
 	mkdir ./deployment/vendor
-	mkdir ./deployment/img
+	mkdir ./deployment/images
 # 	combine
 	cp -a ./css/. ./deployment/css/
 	cp -a ./vendor/. ./deployment/vendor/
-	cp -a ./img/. ./deployment/img/
-	cp ./index.html ./deployment/index.html
-	cp ./deployment.sh ./deployment/
+	cp -a ./images/. ./deployment/images/
+	cp ./index.html ./deployment/index.html	
 # 	archive
-	tar -zcvf deployment.tar.gz ./deployment
-#	upload
+	tar -zcvf deployment.tar.gz ./deployment	
+
+uploadarchive:
 	rsync -avzhe ssh ./deployment.tar.gz maker@www.compote.xyz:/srv/www/compote.xyz/
 	rsync -avzhe ssh ./deployment.sh maker@www.compote.xyz:/srv/www/compote.xyz/
-#	clean
+
+cleanarchive:
 	rm -rf deployment
 	rm -rf deployment.tar.gz
+
+deploy:
+	make archive
+	make uploadarchive
 #	apply	
 	ssh -t maker@www.compote.xyz "cd /srv/www/compote.xyz;chmod +x deployment.sh;./deployment.sh"
+	make cleanarchive
+
+compressimages:
+	cd images;pngquant *.png */*.png */*/*.png;cd ..;
+	echo "produces copies of images with or8/fs8 postfix"

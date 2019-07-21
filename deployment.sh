@@ -3,7 +3,7 @@
 # clean
 rm -rf ./vendor
 rm -rf ./css
-rm -rf ./img
+rm -rf ./images
 rm -rf ./index.html
 
 # unarchive and relocate
