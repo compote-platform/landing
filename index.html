@@ -12,6 +12,23 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="css/landing-page.min.css" rel="stylesheet">
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '657453688087275');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=657453688087275&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
 </head>
 
 <body class="">
@@ -32,10 +49,11 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="btn about-us" href="#">About Us</a>
+          <!-- <a class="btn about-us" href="#">About Us</a> -->
+          <!-- <a class="btn about-us" href="#">FAQ</a> -->
         </li>
         <li class="nav-item">
-          <a class="btn sign-up-for-a-closed-beta white-button" href="#sounds_interesting">Sign up for a closed beta</a>
+          <a class="btn sign-up-for-a-closed-beta white-button" href="#mc_embed_signup">Sign up for a closed beta</a>
         </li>
       </ul>
     </div>
@@ -48,14 +66,14 @@
       <div class="col increase-sales-card card-last">
         <div class="card-body">
           <h5 class="card-title marketing-title">Increase <span class="watermelon">sales</span> by making<br/>others compete for your products</h5>
-          <a href="#sounds_interesting" class="btn sign-up-for-a-closed-beta-watermelon">Sign up for a closed beta</a>
+          <a href="#mc_embed_signup" class="btn sign-up-for-a-closed-beta-watermelon">Sign up for a closed beta</a>
           <a href="#how_it_works" class="btn learn-more white-button">Learn more</a>
         </div>
       </div>
       <!-- Devices preview card -->
       <div class="col devices-image-card card-first">
         <div class="card-body">
-           <img class="card-img" src="/img/devices.png" alt="Devices Preview">
+           <img class="card-img" src="/img/zeplin/picLandingHomeDevicesWithApp@3x.png" alt="Devices Preview">
         </div>
       </div>
     </div>
@@ -98,6 +116,9 @@
   <div class="container-fluid no-gutters explanation-background">
     <!-- The Solution -->
     <div class="text-center solution-background">
+      <!-- <div class="justify-content-center align-items-center" style="width:100%;height: 250px;position:absolute;"> -->
+        <!-- <div class="solution-background"></div> -->
+      <!-- </div> -->
       <h1 class="marketing-title-condensed">The <span class="midblue">Solution</span></h1>
       <div class="card solution-card">
         <div class="card-body">
@@ -157,22 +178,23 @@
     
     
     <!-- Sounds interesting give it a try -->
-    <div class="text-center no-gutters sounds-interesting" id="sounds_interesting">
+    <div class="text-center no-gutters sounds-interesting" id="mc_embed_signup">
       <h1 class="marketing-title-condensed">Sounds <span class="midblue">interesting</span>? Give it a <span class="watermelon">try</span>!</h1>
       <p class="marketing-text">There's no price tag attached, <span class="watermelon">yet</span>.</p>
-      <form class="form-inline justify-content-center">
+      <form class="form-inline justify-content-center" action="https://macroappmac.us19.list-manage.com/subscribe/post?u=7a76194d800feb45f08537f99&amp;id=3f8b5717db" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
         <div class="form-group">
-          <input type="text" class="form-control" id="nameinput" placeholder="Your name">
+          <input type="text" id="mce-FNAME" class="form-control" placeholder="Your name">
         </div>
         <div class="form-group">
-          <input type="email" class="form-control" id="emailinput" placeholder="Enter your Email">
+          <input type="email" id="mce-Email" class="form-control" placeholder="Enter your Email">
         </div>
-        <button type="submit" class="btn sign-up-for-a-closed-beta-watermelon">Sign up for a closed beta</button>
+        <input value="Sign up for a closed beta" name="subscribe" id="mc-embedded-subscribe" type="submit" class="btn sign-up-for-a-closed-beta-watermelon">
       </form>
     </div>
   </div>
-
-
+  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+  <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+  
   <!-- Footer -->
   <footer class="page-footer footer-background">
     <div class="container-fluid text-center text-md-left">
@@ -181,28 +203,28 @@
         <div class="col-md-3 mx-auto">
           <h5 class="text-uppercase mt-3 mb-4">Compote</h5>
           <ul class="list-unstyled">
-            <li>
+            <!-- <li>
               <a class="footer-link" href="#!">About Us</a>
-            </li>
+            </li> -->
             <li>
-              <a class="footer-link" href="#!">Terms and Conditions</a>
+              <a class="footer-link" href="https://www.termsandconditionsgenerator.com/live.php?token=yiRCZTYgsH01LL5WcU6nqZx1EiyVW8LP">Terms and Conditions</a>
             </li>
           </ul>
         </div>
-        <hr class="clearfix w-100 d-md-none">
+        <!-- <hr class="clearfix w-100 d-md-none"> -->
         <div class="col-md-3 mx-auto">
           <h5 class="text-uppercase mt-3 mb-4">Contact</h5>
           <ul class="list-unstyled">
             <li>
               <a class="footer-link" href="mailto:contact@compote.xyz">contact@compote.xyz</a>
             </li>
-            <li>
+            <!-- <li>
               <a class="footer-link" href="#!">COMPOTE SA Rte Antique Stationery 190 CH - 1723 Marly</a>
-            </li>
+            </li> -->
           </ul>
         </div>
-        <hr class="clearfix w-100 d-md-none">
-        <div class="col-md-3 mx-auto">
+        <!-- <hr class="clearfix w-100 d-md-none"> -->
+        <!-- <div class="col-md-3 mx-auto">
           <h5 class="text-uppercase mt-3 mb-4">Get the Compote app</h5>
           <ul class="list-unstyled">
             <li>
@@ -211,9 +233,9 @@
               </a>
             </li>
           </ul>
-        </div>
+        </div> -->
         <!-- Grid column -->
-        <hr class="clearfix w-100 d-md-none">
+        <!-- <hr class="clearfix w-100 d-md-none"> -->
         <!-- Grid column -->
         <div class="col-md-3 mx-auto">
           <!-- Links -->
@@ -227,7 +249,7 @@
                 <img src="/img/zeplin/facebook@3x.png" class="footer-img d-inline-block align-top" alt="Facebook">
               </a>
             </li>
-            <li>
+            <!-- <li>
               <a href="#!">
                 <img src="/img/zeplin/instagram@3x.png" class="footer-img d-inline-block align-top" alt="Instagram">
               </a>
@@ -241,10 +263,9 @@
               <a href="#!">
                 <img src="/img/zeplin/icTwitter@3x.png" class="footer-img d-inline-block align-top" alt="Twitter">
               </a>
-            </li>
+            </li> -->
           </ul>
         </div>
-        <!-- Grid column -->
       </div>
       <!-- Splitter -->
       <div class="row splitter">
@@ -254,7 +275,7 @@
         <div class="col-md-4">
           <img src="/img/zeplin/logo@3x.png" class="logo d-inline-block align-top" alt="Compote">
         </div>
-        <hr class="clearfix w-100 d-md-none">
+        <!-- <hr class="clearfix w-100 d-md-none"> -->
         <div class="col-md-4">
         </div>
         <hr class="clearfix w-100 d-md-none">

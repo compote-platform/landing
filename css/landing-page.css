@@ -49,7 +49,7 @@
 }
 
 .top-background {
-  background-image: url("/img/landingBgMain.png");
+  background-image: url("/images/header.png");
   background-position: left top;
   background-size: auto;
   background-repeat: no-repeat;
@@ -60,7 +60,7 @@
 }
 
 .explanation-background {
-  background-image: url("/img/zeplin/bg@3x.png");
+  background-image: url("/images/explanation.background.png");
   background-position: center top 100px;
   background-size: auto;
   background-repeat: no-repeat;
@@ -69,7 +69,7 @@
 }
 
 .footer-background {
-  background-image: url("/img/zeplin/blue@3x.png");
+  background-image: url("/images/footer.png");
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -184,12 +184,12 @@
 }
 
 .solution-background {
-  background-image: url("/img/zeplin/bgSolution@3x.png");
-  background-position: center top 25px;
+  background-image: url("/images/solution.png");
+  background-position: center top 50px;
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
-  height: 200px;
+  height: 250px;
 }
 
 .solution-card .card-text {
@@ -198,7 +198,7 @@
   letter-spacing: 0.22px;
   line-height: 25px;
   color: #ffffff;
-  margin-top: -10px;
+  margin-top: 35px;
 }
 
 .solution-card .bold {
@@ -344,6 +344,12 @@
   color: #494949;
 }
 
+@media screen and (max-width: 1024px) {
+  .solution-card .card-text {
+    margin-top: 15px;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .sounds-interesting .form-group {
     width: 300px;
@@ -354,14 +360,14 @@
     padding-left: 0pt;
   }
   .top-background {
-    background-image: url("/img/zeplin/landingBgMainMobile@3x.png");
+    background-image: url("/images/mobile/header.png");
     width: 100%;
     height: 1000px;
   }
   .solution-background {
-    background-image: url("/img/zeplin/mobile/bgSolution@3x.png");
+    background-image: url("/images/mobile/solution.png");
     background-size: cover;
-    height: 331px;
+    height: 340px;
   }
   .solution-card {
     padding-top: 20px;
@@ -414,14 +420,11 @@
   .navbar-brand {
     margin-right: -10px;
   }
-  .solution-background {
-    height: 300px;
-  }
   .solution-background .marketing-title-condensed {
     margin-bottom: -12px;
   }
   .solution-background .solution-card {
-    padding-top: 15px;
+    padding-top: 35px;
     padding-left: 5px;
     padding-right: 5px;
   }
