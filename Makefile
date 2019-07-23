@@ -14,8 +14,8 @@ archive:
 	tar -zcvf deployment.tar.gz ./deployment	
 
 uploadarchive:
-	rsync -avzhe ssh ./deployment.tar.gz maker@www.compote.xyz:/srv/www/compote.xyz/
-	rsync -avzhe ssh ./deployment.sh maker@www.compote.xyz:/srv/www/compote.xyz/
+	rsync -avzhe ssh ./deployment.tar.gz maker@www.compote.xyz:/var/www/compote.xyz/
+	rsync -avzhe ssh ./deployment.sh maker@www.compote.xyz:/var/www/compote.xyz/
 
 cleanarchive:
 	rm -rf deployment
@@ -25,7 +25,7 @@ deploy:
 	make archive
 	make uploadarchive
 #	apply	
-	ssh -t maker@www.compote.xyz "cd /srv/www/compote.xyz;chmod +x deployment.sh;./deployment.sh"
+	ssh maker@www.compote.xyz "cd /var/www/compote.xyz;chmod +x deployment.sh;./deployment.sh"
 	make cleanarchive
 
 compressimages:
