@@ -6,7 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Compote - Landing</title>
+  <title>Compote</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145835702-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-145835702-1');
+  </script>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -22,13 +32,48 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '657453688087275');
+    fbq('init', '505097933601552');
     fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=657453688087275&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=505097933601552&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Facebook Pixel Code -->
+
+  <script>
+    window.addEventListener('load', function() {
+      var onSubmit = function(e) {
+        ga('send', 'event', 'From', 'submit', 'Submit form');
+      };
+
+      var observer = new IntersectionObserver(function(entries) {
+        if(entries[0].isIntersecting === true) {
+          ga('send', 'event', 'Page', 'form visible', 'Scrolled to bottom');
+        }
+      }, { threshold: [1] });
+
+      var emailInput = document.getElementsByName("EMAIL")[0];
+      var nameInput = document.getElementsByName("FNAME")[0];
+      var form = document.getElementsByName("mc-embedded-subscribe-form")[0];
+
+
+      emailInput.addEventListener('input', function(e) {
+        ga('send', 'event', 'Form', 'email', 'Email input');
+      });
+
+      nameInput.addEventListener('input', function(e) {
+        ga('send', 'event', 'From', 'name', 'Name input');
+      });
+
+      if (form.addEventListener) {
+        form.addEventListener("submit", onSubmit, false);
+      } else {
+        form.attachEvent("onsubmit", onSubmit);
+      }
+
+      observer.observe(document.querySelector("#mc_embed_signup"));
+    });
+  </script>
 </head>
 
 <body class="">
@@ -228,6 +273,7 @@
     </div> -->
 
   </div>
+
 
 
   <!-- <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script> -->
