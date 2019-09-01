@@ -4,6 +4,12 @@
 
 Use `make deploy` command to deploy results of any changes to server.
 Be sure to have access via ssh-key.
+Also add the following to your ssh config file (~/.ssh/config)
+```
+Host compote.xyz
+  HostName compote.xyz
+  User maker
+```
 
 ### Basic Usage
 
