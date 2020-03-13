@@ -1,476 +1,480 @@
-
 //Backgrounds and cards
 body {
-	// background: linear-gradient($watermelon, #2174a6) !important;
-	// background-color: $watermelon;
+  // background: linear-gradient($watermelon, #2174a6) !important;
+  // background-color: $watermelon;
 }
 // desktop
 .top-background {
-	background-image: url('/images/header.png');
-	background-position: left top;
-	background-size: auto;
-	background-repeat: no-repeat;
+  background-image: url("/images/header.png");
+  background-position: left top;
+  background-size: auto;
+  background-repeat: no-repeat;
 
-	position: absolute;
-	width: 100%;
-	height: 702px;
-	display: block;
+  position: absolute;
+  width: 100%;
+  height: 702px;
+  display: block;
 }
 
 .explanation-background {
-	background-image: url('/images/explanation.background.png');
-	background-position: center top 100px;
-	background-size: auto;
-	background-repeat: no-repeat;
-	padding-left: 0;
-	padding-right: 0;
+  background-image: url("/images/explanation.background-2.png");
+  background-position: center top 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .footer-background {
-	background-image: url('/images/footer.png');
-	background-position: center top;
-	background-size: cover;
-	background-repeat: no-repeat;
-	width: 100%;
-	padding-left: 0;
-	padding-right: 0;
+  background-image: url("/images/footer.png");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .page-footer {
-	padding-top: 30px;
-	background-color: #2174A6;
+  padding-top: 30px;
+  background-color: #2174a6;
 
-	.container-fluid {
-		padding-left: 50px;
-		padding-right: 50px;
-	}
+  .container-fluid {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 
-	.row {
-		font-family: Avenir-Heavy;
-		font-size: 15px;
-		line-height: 21px;
-		color: $white;
-	}
+  .row {
+    font-family: Avenir-Heavy;
+    font-size: 15px;
+    line-height: 21px;
+    color: $white;
+  }
 
-	.footer-link {
-		font-family: Avenir-Book;
-		font-size: 15px;
-		line-height: 21px;
-		color: $white;
-	}
+  .footer-link {
+    font-family: Avenir-Book;
+    font-size: 15px;
+    line-height: 21px;
+    color: $white;
+  }
 
-	.copyright {
-		@extend .footer-link;
-		text-align: right;
-	}
+  .copyright {
+    @extend .footer-link;
+    text-align: right;
+  }
 
-	.footer-img {
-		// @extend .align-top;
-		// @extend .d-inline-block;
-		margin-left: 5px;
-		margin-right: 5px;
+  .footer-img {
+    // @extend .align-top;
+    // @extend .d-inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
 
-		height: 35px;
-		width: 35px;
-	}
+    height: 35px;
+    width: 35px;
+  }
 
-	.splitter {
-		// margin-left: 50px;
-		// margin-right: 50px;
-		height: 1px;
-		opacity: 20%;
-		background-color: $white;
-		margin-top: 30px;
-	}
+  .splitter {
+    // margin-left: 50px;
+    // margin-right: 50px;
+    height: 1px;
+    opacity: 20%;
+    background-color: $white;
+    margin-top: 30px;
+  }
 
-	.footer-brand-row {
-		padding-top: 30px;
-		padding-bottom: 30px;
-	}
-
+  .footer-brand-row {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 .logo {
-	height: 40px;
-	width: 158px;
+  height: 40px;
+  width: 158px;
 }
 
 .increase-sales-card {
-	@extend .opaque-no-border;
+  @extend .opaque-no-border;
 
-	height: 300px;
-	margin-top: 100px;
-	margin-bottom: 150px;
+  height: 300px;
+  margin-top: 100px;
+  margin-bottom: 150px;
 }
 
 .devices-image-card {
-	@extend .opaque-no-border;
+  @extend .opaque-no-border;
 
-	margin-top: 80px;
+  margin-top: 80px;
 }
 
 .question-card {
-	@extend .opaque-no-border;
+  @extend .opaque-no-border;
 
-	height: 70px;
+  height: 70px;
 
-	.card-horizontal {
-		height: 70px;
-	}
+  .card-horizontal {
+    height: 70px;
+  }
 
-	.card-img {
-		height: 50px;
-		width: 50px;
-	}
+  .card-img {
+    height: 50px;
+    width: 50px;
+  }
 
-	.question-img {	
-		height: 50px;
-		width: 50px;
-	}
+  .question-img {
+    height: 50px;
+    width: 50px;
+  }
 
-	.card-body {
-		padding: 10px 10px 10px 10px;
-	}
+  .card-body {
+    padding: 10px 10px 10px 10px;
+  }
 
-	.card-title {
-		font-family: Avenir-Heavy;
-		font-size: 18px;
-		line-height: 20px;
-		letter-spacing: 0.22px;
-		color: $gray;
-		margin: 0;
-	}
+  .card-title {
+    font-family: Avenir-Heavy;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.22px;
+    color: $gray;
+    margin: 0;
+  }
 }
 
 .welcome-container {
-	margin-bottom: 80px;
+  margin-bottom: 80px;
 
-	.marketing-title {
-		text-align: left;
-	}
+  .marketing-title {
+    text-align: left;
+  }
 
-	.card-body {
-		text-align: justify;
-	}
+  .card-body {
+    text-align: justify;
+  }
 }
 
 // desktop
 .solution-background {
-	background-image: url('/images/solution.png');
-	background-position: center top 50px;
-	background-size: contain;
-	background-repeat: no-repeat;
-	width: 100%;
-	height: 250px;
+  background-image: url("/images/solution.png");
+  background-position: center top 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 250px;
+  z-index: 3;
+  position: relative;
 }
 
 .solution-card {
-	@extend .opaque-no-border;
+  @extend .opaque-no-border;
 
-	.card-text {
-		font-family: Avenir-Medium;
-		font-size: 18px;
-		letter-spacing: 0.22px;
-		line-height: 25px;
-		color: $white;
-		margin-top: 35px;
-	}
+  .card-text {
+    font-family: Avenir-Medium;
+    font-size: 18px;
+    letter-spacing: 0.22px;
+    line-height: 25px;
+    color: $white;
+    margin-top: 35px;
+  }
 
-	.bold {
-		font-family: Avenir-Black;
-	}
+  .bold {
+    font-family: Avenir-Black;
+  }
 }
 
 .how-it-works {
-	margin-top: 50px;
+  margin-top: 50px;
 }
 
 .image-card {
-	@extend .opaque-no-border;
+  @extend .opaque-no-border;
 }
 
 .explanation-card {
-	@extend .opaque-no-border;
+  @extend .opaque-no-border;
 
-	.card-header {
-		@extend .opaque-no-border;
+  .card-header {
+    @extend .opaque-no-border;
 
-		padding-bottom: 15px;
+    padding-bottom: 15px;
 
-		.card-title {
-			text-transform: uppercase;
-			font-family: Avenir-Black;
-			color: $textgray;
-			letter-spacing: 0.0px;
-			font-size: 15px;
-		}
+    .card-title {
+      text-transform: uppercase;
+      font-family: Avenir-Black;
+      color: $textgray;
+      letter-spacing: 0px;
+      font-size: 15px;
+    }
 
-		.card-subtitle {
-			font-family: Avenir-Black;
-			color: $textgray;
-			font-size: 25px;
-			letter-spacing: 0.0px;
-		}
-	}
+    .card-subtitle {
+      font-family: Avenir-Black;
+      color: $textgray;
+      font-size: 25px;
+      letter-spacing: 0px;
+    }
+  }
 
-	.card-body {
-		padding-top: 0px;
-	}
+  .card-body {
+    padding-top: 0px;
+  }
 
-	.card-text {
-		font-family: Avenir-Medium;
-		font-size: 18px;
-		line-height: 24px;
-		letter-spacing: 0.0px;
-		color: $textgray;
-	}
+  .card-text {
+    font-family: Avenir-Medium;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: $textgray;
+  }
 }
 
 .navbar {
-	padding-top: 20px;
-	padding-right: 50px;
-	padding-left: 50px;
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 .about-us {
-	text-transform: uppercase;
-	font-family: Avenir-Black;
-	font-size: 15px;
-	line-height: 37px;
-	letter-spacing: 1.18px;
-	color: $white;
-	padding-right: 50px;
+  text-transform: uppercase;
+  font-family: Avenir-Black;
+  font-size: 15px;
+  line-height: 37px;
+  letter-spacing: 1.18px;
+  color: $white;
+  padding-right: 50px;
 }
 
 .sign-up-for-a-closed-beta {
-	text-transform: uppercase;
-	font-family: Avenir-Black;
-	font-size: 15px;
-	letter-spacing: 0.18px;
-	line-height: 37px;
-	border-radius: 25px;
-	color: $gray;
-	background-color: $white;
-	height: 50px;
-	width: 300px;
+  text-transform: uppercase;
+  font-family: Avenir-Black;
+  font-size: 15px;
+  letter-spacing: 0.18px;
+  line-height: 37px;
+  border-radius: 25px;
+  color: $gray;
+  background-color: $white;
+  height: 50px;
+  width: 300px;
 }
 
 .marketing-title {
-	font-family: Avenir-Black;
-	font-size: 40px;
-	letter-spacing: 0.8px;
-	line-height: 55px;
-	color: $textgray;
-	margin-bottom: 30px;
+  font-family: Avenir-Black;
+  font-size: 40px;
+  letter-spacing: 0.8px;
+  line-height: 55px;
+  color: $textgray;
+  margin-bottom: 30px;
 }
 
 .marketing-title-condensed {
-	@extend .marketing-title;
+  @extend .marketing-title;
 
-	letter-spacing: 0.0px;
+  letter-spacing: 0px;
 }
 
 .sign-up-for-a-closed-beta-watermelon {
-	@extend .sign-up-for-a-closed-beta;
+  @extend .sign-up-for-a-closed-beta;
 
-	height: 50px;
-	font-size: 15px;
-	line-height: 37px;
-	width: 300px;
-	color: $white;
-	background-color: $watermelon;
+  height: 50px;
+  font-size: 15px;
+  line-height: 37px;
+  width: 300px;
+  color: $white;
+  background-color: $watermelon;
 }
 
 .learn-more {
-	@extend .sign-up-for-a-closed-beta;
-	@extend .drop-shadow;
+  @extend .sign-up-for-a-closed-beta;
+  @extend .drop-shadow;
 
-	height: 50px;
-	font-size: 15px;
-	line-height: 37px;
-	letter-spacing: 0.18pt;
-	margin-left: 20px;
-	width: 200px;
-	color: $gray;
-	background-color: $white;
+  height: 50px;
+  font-size: 15px;
+  line-height: 37px;
+  letter-spacing: 0.18pt;
+  margin-left: 20px;
+  width: 200px;
+  color: $gray;
+  background-color: $white;
 }
 
 .sounds-interesting {
-	background-color: $white;
-	// height: 400px;
-	margin-top: 50px;
+  background-color: $white;
+  // height: 400px;
+  margin-top: 50px;
 
-	.marketing-text {
-		font-family: Avenir-Medium;
-		font-size: 18px;
-		line-height: 24px;
-		letter-spacing: 0.0px;
-		color: $textgray;
-		margin-bottom: 40px;
-	}
+  .marketing-text {
+    font-family: Avenir-Medium;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: $textgray;
+    margin-bottom: 40px;
 
-	.marketing-title-condensed {
-		padding-top: 60px;
-	}
+    &--line {
+      border-bottom: 2px solid #ed4f62;
+      margin-right: 5px;
+    }
+  }
 
-	.form-group {
-		padding-right: 20px;
+  .marketing-title-condensed {
+    padding-top: 60px;
+  }
 
-		font-family: Avenir-Roman;
-		font-size: 18px;
-		line-height: 20px;
-		letter-spacing: 0.36px;
-	}
+  .form-group {
+    padding-right: 20px;
 
-	.form-control {
-		@extend .drop-shadow;
+    font-family: Avenir-Roman;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.36px;
+  }
 
-		height: 50px;
-	}
+  .form-control {
+    @extend .drop-shadow;
 
-	.form-inline {
-		padding-bottom: 50px;
-	}
-} 
+    height: 50px;
+  }
+
+  .form-inline {
+    padding-bottom: 50px;
+  }
+}
 
 .btn:hover {
-    color: $white;
+  color: $white;
 }
 
 .white-button:hover {
-	color: $textgray;
+  color: $textgray;
 }
 
 @media screen and (max-width: $small-laptop-breakpoint) {
-	.solution-card {
-		.card-text {
-			margin-top: 15px;
-		}
-	}
+  .solution-card {
+    .card-text {
+      margin-top: 15px;
+    }
+  }
 }
-
 
 // mobile
 @media screen and (max-width: $mobile-breakpoint) {
-	.sounds-interesting {
-		.form-group {
-			width: 300px;
-			padding-right: 0;
-			// padding-left: 10px;
-			// padding-right: 10px;
-		}
-	}
-	.navbar-brand {
-		padding-top: 4pt;
-		padding-left: 0pt;
-	}
+  .sounds-interesting {
+    .form-group {
+      width: 300px;
+      padding-right: 0;
+      // padding-left: 10px;
+      // padding-right: 10px;
+    }
+  }
+  .navbar-brand {
+    padding-top: 4pt;
+    padding-left: 0pt;
+  }
 
-	.explanation-card {
-		.image-card {
-			// width: ;
-		}
-	}
+  .explanation-card {
+    .image-card {
+      // width: ;
+    }
+  }
 
-	.top-background {
-		background-image: url('/images/mobile/header.png');
-		width: 100%;
-		height: 1000px;
-	}
+  .top-background {
+    background-image: url("/images/mobile/header.png");
+    width: 100%;
+    height: 1000px;
+  }
 
-	.solution-background {
-		background-image: url('/images/mobile/solution.png');
-		background-size: cover;
-		height: 340px;
-	}
+  .solution-background {
+    background-image: url("/images/mobile/solution.png");
+    background-size: cover;
+    height: 340px;
+  }
 
-	.solution-card {
-		padding-top: 20px;
-		padding-left: 20px;
-		padding-right: 20px;
-		// width: 275px;
-		.card-text {
-			font-size: 16px;
-			letter-spacing: 0.19px;
-		}
-	}
+  .solution-card {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    // width: 275px;
+    .card-text {
+      font-size: 16px;
+      letter-spacing: 0.19px;
+    }
+  }
 
-	.page-footer {
-		.list-group-horizontal {
-			justify-content: center;
-		}
-		.copyright {
-			text-align: center;
-		}
-	}
+  .page-footer {
+    .list-group-horizontal {
+      justify-content: center;
+    }
+    .copyright {
+      text-align: center;
+    }
+  }
 
-	.welcome-container {
-		.marketing-title {
-			font-family: Avenir-Black;
-			font-size: 28px;
-			letter-spacing: 0.0px;
-			line-height: 40px;
-			text-align: center;
-			// margin-bottom: 30px;
-		}
-		.increase-sales-card {
-			.card-body {
-				padding-left: 0;
-				padding-right: 0;
-				text-align: center;
-			}
-		}
-		.devices-image-card {
-			margin-top: 60px;
-		}
-		.increase-sales-card {
-			margin-top: 50px;
-			padding-left: 0;
-			padding-right: 0;
-		}
-		
-		.sign-up-for-a-closed-beta-watermelon {
-			padding-left: 0;
-			padding-right: 0;
-			// width: 300px;
-		}
-		.learn-more {
-			margin-left: 0;
-			margin-top: 20px;
-			// padding-left: 0;
-			// padding-right: 0;
-		}
-	}
+  .welcome-container {
+    .marketing-title {
+      font-family: Avenir-Black;
+      font-size: 28px;
+      letter-spacing: 0px;
+      line-height: 40px;
+      text-align: center;
+      // margin-bottom: 30px;
+    }
+    .increase-sales-card {
+      .card-body {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+      }
+    }
+    .devices-image-card {
+      margin-top: 60px;
+    }
+    .increase-sales-card {
+      margin-top: 50px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .sign-up-for-a-closed-beta-watermelon {
+      padding-left: 0;
+      padding-right: 0;
+      // width: 300px;
+    }
+    .learn-more {
+      margin-left: 0;
+      margin-top: 20px;
+      // padding-left: 0;
+      // padding-right: 0;
+    }
+  }
 }
 
 // tiny mobile
 @media screen and (max-width: $small-mobile-breakpoint) {
-	.navbar-brand {
-		margin-right: -10px;
-	}
-	.solution-background {
-		// height: 400px;
+  .navbar-brand {
+    margin-right: -10px;
+  }
+  .solution-background {
+    // height: 400px;
 
-		.marketing-title-condensed {
-			margin-bottom: -12px;
-		}
+    .marketing-title-condensed {
+      margin-bottom: -12px;
+    }
 
-		.solution-card {
-			padding-top: 35px;
-			padding-left: 5px;
-			padding-right: 5px;
-		}
-	}
+    .solution-card {
+      padding-top: 35px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
 
-	// .solution-card {
-	// 	padding-top: 20px;
-	// 	padding-left: 20px;
-	// 	padding-right: 20px;
-	// 	// width: 275px;
-	// 	.card-text {
-	// 		font-size: 16px;
-	// 		letter-spacing: 0.19px;
-	// 	}
-	// }
+  // .solution-card {
+  // 	padding-top: 20px;
+  // 	padding-left: 20px;
+  // 	padding-right: 20px;
+  // 	// width: 275px;
+  // 	.card-text {
+  // 		font-size: 16px;
+  // 		letter-spacing: 0.19px;
+  // 	}
+  // }
 }
 
 .container {
@@ -506,7 +510,7 @@ body {
 }
 
 .container {
-	.card-group {
-		padding-top: 50px;
-	}
+  .card-group {
+    padding-top: 50px;
+  }
 }

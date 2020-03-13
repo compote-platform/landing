@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="101" height="101" viewBox="0 0 101 101">
+    <defs>
+        <filter id="prefix__a" width="400%" height="400%" x="-150%" y="-150%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="17.5"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.419939159 0 0 0 0 0.487258864 0 0 0 0 0.823680933 0 0 0 0.5 0"/>
+        </filter>
+        <filter id="prefix__c" width="345.7%" height="345.7%" x="-122.9%" y="-122.9%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="7.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0.571665396 0 0 0 0 0.690192208 0 0 0 0 1 0 0 0 0.5 0"/>
+        </filter>
+        <circle id="prefix__b" cx="920.5" cy="470.5" r="17.5"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(-870 -420)">
+        <use fill="#000" filter="url(#prefix__a)" xlink:href="#prefix__b"/>
+        <use fill="#FFF" xlink:href="#prefix__b"/>
+        <use fill="#000" filter="url(#prefix__c)" xlink:href="#prefix__b"/>
+        <circle cx="920.5" cy="470.5" r="15" stroke="#1073AE" stroke-linejoin="square" stroke-width="5"/>
+        <circle cx="920.5" cy="470.5" r="20" stroke="#FFF" stroke-opacity=".6" stroke-width="5"/>
+        <circle cx="920.5" cy="470.5" r="22.5" stroke="#FFF" stroke-opacity=".2" stroke-width="10"/>
+    </g>
+</svg>
