@@ -58,10 +58,20 @@
         }
       }, { threshold: [1] });
 
-      var emailInput = document.getElementsByName("EMAIL")[0];
-      var nameInput = document.getElementsByName("FNAME")[0];
+      var emailHeaderInput = document.getElementsByName("EMAIL")[0];
+      var nameHeaderInput = document.getElementsByName("FNAME")[0];
+      var emailInput = document.getElementsByName("EMAIL")[1];
+      var nameInput = document.getElementsByName("FNAME")[2];
+      var formHeader = document.getElementsByName("mc-embedded-subscribe-form-header")[0];
       var form = document.getElementsByName("mc-embedded-subscribe-form")[0];
 
+      emailHeaderInput.addEventListener('input', function (e) {
+        ga('send', 'event', 'Form', 'email', 'Email input');
+      });
+
+      nameHeaderInput.addEventListener('input', function (e) {
+        ga('send', 'event', 'From', 'name', 'Name input');
+      });
 
       emailInput.addEventListener('input', function (e) {
         ga('send', 'event', 'Form', 'email', 'Email input');
@@ -71,6 +81,11 @@
         ga('send', 'event', 'From', 'name', 'Name input');
       });
 
+      if (formHeader.addEventListener) {
+        formHeader.addEventListener("submit", onSubmit, false);
+      } else {
+        formHeader.attachEvent("onsubmit", onSubmit);
+      }
       if (form.addEventListener) {
         form.addEventListener("submit", onSubmit, false);
       } else {
@@ -78,6 +93,7 @@
       }
 
       observer.observe(document.querySelector("#mc_embed_signup"));
+      observer.observe(document.querySelector("#mc_embed_signup-header"));
     });
   </script>
 </head>
@@ -105,7 +121,13 @@
           <!-- <a class="btn about-us" href="#">FAQ</a> -->
         </li>
         <li class="nav-item">
-          <a class="btn sign-up-for-a-closed-beta white-button" href="#mc_embed_signup">sign up for free</a>
+          <a class="btn sign-up-for-a-closed-beta white-button" href="#mc_embed_signup" data-i18n-key="sign-up">sign up for free</a>
+        </li>
+        <li class="nav-item">
+          <select data-i18n-switcher class="locale-switcher">
+            <option value="en">English</option>
+            <option value="ua">Українська</option>
+          </select>
         </li>
       </ul>
     </div>
@@ -113,20 +135,62 @@
 
   <!-- Welcome -->
   <div class="container-fluid no-gutters welcome-container">
-    <div class="card-group">
+    <div class="card-group align-content-stretch video-form-wrapper">
       <!-- Increase sales card -->
-      <div class="col increase-sales-card card-last">
+      <div class="col increase-sales-card">
         <div class="card-body">
-          <h5 class="card-title marketing-title">Increase <span class="watermelon">sales</span> by making<br />others
-            compete for your products</h5>
-          <a href="#mc_embed_signup" class="btn sign-up-for-a-closed-beta-watermelon">sign up for free</a>
-          <a href="#how_it_works" class="btn learn-more white-button">Learn more</a>
+          <div class="video-header">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/glnafYkg1m4?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+<!--          <h5 class="card-title marketing-title">Increase <span class="watermelon">sales</span> by making<br />others-->
+<!--            compete for your products</h5>-->
+<!--          <a href="#mc_embed_signup" class="btn sign-up-for-a-closed-beta-watermelon">sign up for free</a>-->
+<!--          <a href="#how_it_works" class="btn learn-more white-button">Learn more</a>-->
         </div>
       </div>
       <!-- Devices preview card -->
-      <div class="col devices-image-card card-first">
+      <div class="col devices-image-card">
         <div class="card-body">
-          <img class="card-img" src="/images/devices.png" alt="Devices Preview">
+<!--          <img class="card-img" src="/images/devices.png" alt="Devices Preview">-->
+<!-- Sounds interesting give it a try Mailchimp -->
+          <div class="text-center no-gutters sounds-interesting-header">
+            <h1 class="marketing-title-condensed" data-i18n-key="form-title">
+              Sounds <span class="midblue">interesting</span>?<br/>Join <span class="watermelon">now</span>!
+            </h1>
+            <p class="marketing-text"><s data-i18n-key="form-price">$24.99/mo</s> <span class="watermelon" data-i18n-key="form-price-text">FREE for a limited time</span>!</p>
+            <!-- Begin Mailchimp Signup Form -->
+            <div id="mc_embed_signup-header">
+              <form class="form-inline flex-column justify-content-center validate"
+                    action="https://xyz.us3.list-manage.com/subscribe/post?u=7cba3ecee76b3d8e76877d74c&amp;id=12c162534c"
+                    method="post" id="mc-embedded-subscribe-form-header" name="mc-embedded-subscribe-form"
+                    target="_blank" novalidate>
+                <!-- <div id="mc_embed_signup_scroll" style="display: inline;"> -->
+
+                <div class="form-group mc-field-group">
+                  <label for="mce-FNAME" style="display:none">First Name </label>
+                  <input type="text" value="" name="FNAME" class="form-control" data-i18n-placeholder="form-input-name" placeholder="Your name" id="mce-FNAME">
+                </div>
+                <div class="form-group mc-field-group">
+                  <label for="mce-EMAIL" style="display:none">Email Address </label>
+                  <input type="email" value="" name="EMAIL" class="required email form-control" data-i18n-placeholder="form-input-email" placeholder="Enter your Email"
+                         id="mce-EMAIL">
+                </div>
+
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                                                                                          name="b_7cba3ecee76b3d8e76877d74c_12c162534c" tabindex="-1" value=""></div>
+
+                <div class="clear"><input type="submit" value="sign up for free" data-i18n-value="sign-up" name="subscribe" id="mc-embedded-subscribe-header"
+                                          class="button btn sign-up-for-a-closed-beta-watermelon"></div>
+                <!-- </div> -->
+              </form>
+            </div>
+            <!--End mc_embed_signup-->
+          </div>
         </div>
       </div>
     </div>
@@ -138,7 +202,7 @@
             <img class="question-img" src="/images/question1.png" alt="Question">
           </div>
           <div class="card-body justify-content-center align-self-center">
-            <h5 class="card-title">Promotions eat up all your budget?</h5>
+            <h5 class="card-title" data-i18n-key="promotions-title-1">Promotions eat up all your budget?</h5>
           </div>
         </div>
       </div>
@@ -148,7 +212,7 @@
             <img class="question-img" src="/images/question2.png" alt="Question">
           </div>
           <div class="card-body justify-content-center align-self-center">
-            <h5 class="card-title">SEO is a black box for you?</h5>
+            <h5 class="card-title" data-i18n-key="promotions-title-2">SEO is a black box for you?</h5>
           </div>
         </div>
       </div>
@@ -158,7 +222,7 @@
             <img class="question-img" src="/images/question3.png" alt="Question">
           </div>
           <div class="card-body justify-content-center align-self-center">
-            <h5 class="card-title">Endless giveaways and no real customers?</h5>
+            <h5 class="card-title" data-i18n-key="promotions-title-3">Endless giveaways and no real customers?</h5>
           </div>
         </div>
       </div>
@@ -172,10 +236,10 @@
       <!-- <div class="justify-content-center align-items-center" style="width:100%;height: 250px;position:absolute;"> -->
       <!-- <div class="solution-background"></div> -->
       <!-- </div> -->
-      <h1 class="marketing-title-condensed">The <span class="midblue">Solution</span></h1>
+      <h1 class="marketing-title-condensed" data-i18n-key="solution-title">The <span class="midblue">Solution</span></h1>
       <div class="card solution-card">
         <div class="card-body">
-          <p class="card-text">We have the <span class="bold">solution for you</span>, which converts a
+          <p class="card-text" data-i18n-key="solution-text">We have the <span class="bold">solution for you</span>, which converts a
             promotion campaign to a sales campaign.<br />Our platform enables you to <span class="bold">promote your
               business</span> by selling products <span class="bold">through photo-based contests</span>.</p>
         </div>
@@ -251,11 +315,8 @@
                 <div class="row align-items-center step-item--info">
                   <div class="col-lg-5 col-md-5 col-sm-6">
                     <div class="step-item--content">
-                      <h3>You pick <span>products</span></h3>
-                      <p>Create a campaign with your goods and services to sell. All we need is a description, a promo
-                        image
-                        and stock info - as
-                        easy as that.</p>
+                      <h3 data-i18n-key="step1-title">You pick <span>products</span></h3>
+                      <p data-i18n-key="step1-text">Create a campaign with your goods and services to sell. All we need is a description, a promo image and stock info - as easy as that.</p>
                     </div>
                   </div>
                   <div class="col-lg-7 col-md-7 col-sm-6">
@@ -265,22 +326,22 @@
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="step-item--info-box">
-                      <h4>What is a campaign?</h4>
-                      <p>You set an amount of products you want to sell and we create an individual contest for each product.</p>
+                      <h4 data-i18n-key="step1-question-1">What is a campaign?</h4>
+                      <p data-i18n-key="step1-answer-1">You set an amount of products you want to sell and we create an individual contest for each product.</p>
                       <div class="step-item--info-box-decore"><span>?</span></div>
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="step-item--info-box">
-                      <h4>What kind of products can I sell?</h4>
-                      <p>Compote works both with digital and physical products.</p>
+                      <h4 data-i18n-key="step1-question-2">What kind of products can I sell?</h4>
+                      <p data-i18n-key="step1-answer-2">Compote works both with digital and physical products.</p>
                       <div class="step-item--info-box-decore"><span>?</span></div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-lg-5 order-lg-2 order-lg-2 order-md-1 order-1">
-                <h2 class="step-item--title">Step 1</h2>
+                <h2 data-i18n-key="step1-step-title" class="step-item--title">Step 1</h2>
                 <img src="/images/step-item-1.svg" alt="">
               </div>
             </div>
@@ -291,15 +352,15 @@
           <div class="step-item--container">
             <div class="row align-items-center justify-content-md-center">
               <div class="col-lg-5">
-                <h2 class="step-item--title">Step 2</h2>
+                <h2 class="step-item--title" data-i18n-key="step2-step-title">Step 2</h2>
                 <img src="/images/step-item-2.svg" alt="">
               </div>
               <div class="col-lg-7 col-md-10">
                 <div class="row align-items-center step-item--info">
                   <div class="col-lg-5 col-md-6 col-sm-6">
                     <div class="step-item--content">
-                      <h3>We create <span>Compotes</span></h3>
-                      <p>We will create contests with your products as the grand prizes.</p>
+                      <h3 data-i18n-key="step2-title">We create <span>Compotes</span></h3>
+                      <p data-i18n-key="step2-text">We will create contests with your products as the grand prizes.</p>
                       <!-- <p>Create a campaign with your goods and services to sell. All we need is a description, a promo
                         image
                         and stock info - as
@@ -313,19 +374,15 @@
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="step-item--info-box">
-                      <h4>Is it a giveaway?</h4>
-                      <p>It is not a giveaway. Customers pay to enter the competition, the prize is bought from the
-                        entry-fee pool of the
-                        competition.</p>
+                      <h4 data-i18n-key="step2-question-1">Is it a giveaway?</h4>
+                      <p data-i18n-key="step2-answer-1">It is not a giveaway. Customers pay to enter the competition, the prize is bought from the entry-fee pool of the competition.</p>
                       <div class="step-item--info-box-decore"><span>?</span></div>
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="step-item--info-box">
-                      <h4>Do people pay for it?</h4>
-                      <p>Customers pay to enter a competition. Even though customers pay a fraction of price of your
-                        product, the prize is
-                        bought from the entry-fee pool of the competition, so you receive a full-priced sale.</p>
+                      <h4 data-i18n-key="step2-question-1">Do people pay for it?</h4>
+                      <p data-i18n-key="step2-answer-2">Customers pay to enter a competition. Even though customers pay a fraction of price of your product, the prize is bought from the entry-fee pool of the competition, so you receive a full-priced sale.</p>
                       <div class="step-item--info-box-decore"><span>?</span></div>
                     </div>
                   </div>
@@ -339,18 +396,15 @@
           <div class="step-item--container">
             <div class="row align-items-center justify-content-md-center">
               <div class="col-lg-5">
-                <h2 class="step-item--title">Step 3</h2>
+                <h2 class="step-item--title" data-i18n-key="step3-step-title">Step 3</h2>
                 <img src="/images/step-item-3.svg" alt="">
               </div>
               <div class="col-lg-7 col-md-10">
                 <div class="row align-items-center step-item--info">
                   <div class="col-lg-5 col-md-6 col-sm-6">
                     <div class="step-item--content">
-                      <h3>People <span>compete</span><br> and <span>vote</span></h3>
-                      <p>Let the Compote start! We will create contests with your products as the grand prizes. Each
-                        contest
-                        is a guaranteed
-                        sale, every contestant is your potential customer.</p>
+                      <h3 data-i18n-key="step3-title">People <span>compete</span><br> and <span>vote</span></h3>
+                      <p data-i18n-key="step3-text">Let the Compote start! We will create contests with your products as the grand prizes. Each contest is a guaranteed sale, every contestant is your potential customer.</p>
                     </div>
                   </div>
                   <div class="col-lg-7 col-md-6 col-sm-6">
@@ -360,24 +414,15 @@
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="step-item--info-box">
-                      <h4>What is a contest?</h4>
-                      <p>A contest is a paid-entry content based competition for customers on the platform. The winner
-                        of
-                        the competition gets
-                        your product as the prize. The prize is bought from the entry-fee pool of the competition.</p>
+                      <h4 data-i18n-key="step3-question-1">What is a contest?</h4>
+                      <p data-i18n-key="step3-answer-1">A contest is a paid-entry content based competition for customers on the platform. The winner of the competition gets your product as the prize. The prize is bought from the entry-fee pool of the competition.</p>
                       <div class="step-item--info-box-decore"><span>?</span></div>
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="step-item--info-box">
-                      <h4>How do I get product sold?</h4>
-                      <p>A contest with your product as a prize is a sale for you. Once the contest is finished we buy
-                        your
-                        product on behalf of
-                        the winner and you receive winner’s finalization details to complete the deal. You don’t have to
-                        do
-                        anything except
-                        creating a campaign and finalizing the deal.</p>
+                      <h4 data-i18n-key="step3-question-2">How do I get product sold?</h4>
+                      <p data-i18n-key="step3-answer-2">A contest with your product as a prize is a sale for you. Once the contest is finished we buy your product on behalf of the winner and you receive winner’s finalization details to complete the deal. You don’t have to do anything except creating a campaign and finalizing the deal.</p>
                       <div class="step-item--info-box-decore"><span>?</span></div>
                     </div>
                   </div>
@@ -391,7 +436,7 @@
           <div class="step-item--container">
             <div class="row align-items-center justify-content-md-center">
               <div class="col-lg-5">
-                <h2 class="step-item--title">Step 4</h2>
+                <h2 class="step-item--title" data-i18n-key="step4-step-title">Step 4</h2>
                 <img src="/images/step-item-4.svg" alt="">
               </div>
               <div class="col-lg-7 col-md-10">
@@ -399,8 +444,8 @@
                   <div class="col-lg-5 col-md-6 col-sm-6">
                     <div class="step-item--content">
 
-                      <h3>We have a <span>winner</span>,<br>you have a <span>sale</span></h3>
-                      <p>Once the contest is finished - you have a deal.</p>
+                      <h3 data-i18n-key="step4-title">We have a <span>winner</span>,<br>you have a <span>sale</span></h3>
+                      <p data-i18n-key="step4-text">Once the contest is finished - you have a deal.</p>
                       <!-- <p>Once the contest is finished - you have a deal. Deliver prizes to winners and don't stop just
                         there! As a bonus, you can
                         provide consolation prizes & special offers for the non-winners to boost your audience.</p> -->
@@ -413,23 +458,15 @@
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="step-item--info-box">
-                      <h4>Who picks the winner?</h4>
-                      <p>Winners are picked by other users of the platform - this activity is called voting. We use
-                        advanced
-                        fraud detection
-                        mechanism and rewards system to guarantee fair evaluation of contestants.</p>
+                      <h4 data-i18n-key="step4-question-1">Who picks the winner?</h4>
+                      <p data-i18n-key="step4-answer-1">Winners are picked by other users of the platform - this activity is called voting. We use advanced fraud detection mechanism and rewards system to guarantee fair evaluation of contestants.</p>
                       <div class="step-item--info-box-decore"><span>?</span></div>
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="step-item--info-box">
-                      <h4>How does a contest turn into sale?</h4>
-                      <p>Each product in your campaign is a prize to a contest. Users of the platform pay to enter the
-                        contest and we buy the
-                        product from entry-fee pool on behalf of the winner. Every finished contest is a full-priced
-                        sale
-                        of
-                        your product.</p>
+                      <h4 data-i18n-key="step4-question-2">How does a contest turn into sale?</h4>
+                      <p data-i18n-key="step4-answer-2">Each product in your campaign is a prize to a contest. Users of the platform pay to enter the contest and we buy the product from entry-fee pool on behalf of the winner. Every finished contest is a full-priced sale of your product.</p>
                       <div class="step-item--info-box-decore"><span>?</span></div>
                     </div>
                   </div>
@@ -441,15 +478,12 @@
 
         <div class="step-item step-item-5">
           <div class="step-item--container">
-            <h2 class="step-item--title center">Step 5</h2>
+            <h2 class="step-item--title center" data-i18n-key="step5-step-title">Step 5</h2>
             <div class="row justify-content-center">
               <div class="col-lg-6 col-md-10">
                 <div class="step-item--content center">
-                  <h3><span>Finishing up</span> the campaign</h3>
-                  <p>Deliver prizes to winners and don't stop just there! As a bonus, you can provide consolation prizes
-                    &
-                    special offers for
-                    the non-winners to boost your audience.</p>
+                  <h3 data-i18n-key="step5-title"><span>Finishing up</span> the campaign</h3>
+                  <p data-i18n-key="step5-text">Deliver prizes to winners and don't stop just there! As a bonus, you can provide consolation prizes & special offers for the non-winners to boost your audience.</p>
                 </div>
               </div>
             </div>
@@ -469,20 +503,15 @@
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="step-item--info-box">
-                      <h4>How does a winner get my product?</h4>
-                      <p>To enter a competition winner provides shipping or other finalization details, which you
-                        receive
-                        when a contest for your
-                        product is finished.</p>
+                      <h4 data-i18n-key="step5-question-1">How does a winner get my product?</h4>
+                      <p data-i18n-key="step5-answer-1">To enter a competition winner provides shipping or other finalization details, which you receive when a contest for your product is finished.</p>
                       <div class="step-item--info-box-decore"><span>?</span></div>
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="step-item--info-box">
-                      <h4>How do I get the money?</h4>
-                      <p>After a contest is finished we excerpt platform fee from the entry-fee pool and buy your product
-                        on
-                        behalf of the winner.</p>
+                      <h4 data-i18n-key="step5-question-2">How do I get the money?</h4>
+                      <p data-i18n-key="step5-answer-2">After a contest is finished we excerpt platform fee from the entry-fee pool and buy your product on behalf of the winner.</p>
                       <div class="step-item--info-box-decore"><span>?</span></div>
                     </div>
                   </div>
@@ -496,16 +525,15 @@
 
     <!-- Sounds interesting give it a try Mailchimp -->
     <div class="text-center no-gutters sounds-interesting">
-      <h1 class="marketing-title-condensed">Sounds <span class="midblue">interesting</span>? Join <span
-          class="watermelon">now</span>!</h1>
-      <p class="marketing-text"><s>$24.99/mo</s> <span class="watermelon">FREE for a
-          limited
-          time</span>!</p>
+      <h1 class="marketing-title-condensed" data-i18n-key="form-title">
+        Sounds <span class="midblue">interesting</span>?<br/>Join <span class="watermelon">now</span>!
+      </h1>
+      <p class="marketing-text"><s data-i18n-key="form-price">$24.99/mo</s> <span class="watermelon" data-i18n-key="form-price-text">FREE for a limited time</span>!</p>
       <!-- Begin Mailchimp Signup Form -->
       <div id="mc_embed_signup">
-        <form class="form-inline justify-content-center"
+        <form class="form-inline justify-content-center validate"
           action="https://xyz.us3.list-manage.com/subscribe/post?u=7cba3ecee76b3d8e76877d74c&amp;id=12c162534c"
-          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
           target="_blank" novalidate>
           <!-- <div id="mc_embed_signup_scroll" style="display: inline;"> -->
 
@@ -528,7 +556,7 @@
           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
               name="b_7cba3ecee76b3d8e76877d74c_12c162534c" tabindex="-1" value=""></div>
 
-          <div class="clear"><input type="submit" value="sign up for free" name="subscribe" id="mc-embedded-subscribe"
+          <div class="clear"><input type="submit" value="sign up for free" data-i18n-value="sign-up" name="subscribe" id="mc-embedded-subscribe"
               class="button btn sign-up-for-a-closed-beta-watermelon"></div>
           <!-- </div> -->
         </form>
@@ -572,14 +600,14 @@
             </li> -->
             <li>
               <a class="footer-link"
-                href="https://www.termsandconditionsgenerator.com/live.php?token=yiRCZTYgsH01LL5WcU6nqZx1EiyVW8LP">Terms
-                and Conditions</a>
+                data-i18n-key="terms-and-conditions"
+                href="https://www.termsandconditionsgenerator.com/live.php?token=yiRCZTYgsH01LL5WcU6nqZx1EiyVW8LP">Terms and Conditions</a>
             </li>
           </ul>
         </div>
         <!-- <hr class="clearfix w-100 d-md-none"> -->
         <div class="col-md-3 mx-auto">
-          <h5 class="text-uppercase mt-3 mb-4">Contact</h5>
+          <h5 class="text-uppercase mt-3 mb-4" data-i18n-key="footer-contact">Contact</h5>
           <ul class="list-unstyled">
             <li>
               <a class="footer-link" href="mailto:contact@compote.xyz">contact@compote.xyz</a>
@@ -605,7 +633,7 @@
         <!-- Grid column -->
         <div class="col-md-3 mx-auto">
           <!-- Links -->
-          <h5 class="text-uppercase mt-3 mb-4">Follow Us</h5>
+          <h5 class="text-uppercase mt-3 mb-4" data-i18n-key="footer-follow">Follow Us</h5>
 
           <ul class="list-group list-group-horizontal list-unstyled">
             <!-- use class below for mobile -->
@@ -646,7 +674,7 @@
         </div>
         <hr class="clearfix w-100 d-md-none">
         <div class="col-md-4 mx-auto align-self-center">
-          <p class="copyright">Copyright © 2020 by Compote. All right reserved.</p>
+          <p class="copyright" data-i18n-key="footer-copyright">Copyright © 2020 by Compote. All right reserved.</p>
         </div>
 
       </div>
@@ -656,6 +684,8 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!--  <script src="vendor/i18next.min.js"></script>-->
+  <script src="js/main.js"></script>
 
 </body>
 
