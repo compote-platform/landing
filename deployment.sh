@@ -2,6 +2,7 @@
 
 # clean
 rm -rf ./vendor
+rm -rf ./fonts
 rm -rf ./css
 rm -rf ./images
 rm -rf ./index.html
