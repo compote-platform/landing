@@ -87,7 +87,13 @@ function css() {
         .pipe(rename({
             suffix: ".min"
         }))
-        .pipe(cleanCSS())
+        .pipe(cleanCSS({
+            level: {
+                1: {
+                    removeQuotes: false,
+                }
+            }
+        }))
         .pipe(gulp.dest("./css"))
         .pipe(browsersync.stream());
 }
