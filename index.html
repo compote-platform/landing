@@ -61,9 +61,9 @@
       var emailHeaderInput = document.getElementsByName("EMAIL")[0];
       var nameHeaderInput = document.getElementsByName("FNAME")[0];
       var emailInput = document.getElementsByName("EMAIL")[1];
-      var nameInput = document.getElementsByName("FNAME")[2];
-      var formHeader = document.getElementsByName("mc-embedded-subscribe-form-header")[0];
-      var form = document.getElementsByName("mc-embedded-subscribe-form")[0];
+      var nameInput = document.getElementsByName("FNAME")[1];
+      var formHeader = document.getElementsByName("mc-embedded-subscribe-form")[0];
+      var form = document.getElementsByName("mc-embedded-subscribe-form")[1];
 
       emailHeaderInput.addEventListener('input', function (e) {
         ga('send', 'event', 'Form', 'email', 'Email input');
@@ -124,10 +124,15 @@
           <a class="btn sign-up-for-a-closed-beta white-button" href="#mc_embed_signup" data-i18n-key="sign-up">sign up for free</a>
         </li>
         <li class="nav-item">
-          <select data-i18n-switcher class="locale-switcher">
-            <option value="en">English</option>
-            <option value="ua">Українська</option>
-          </select>
+          <div class="locale-switcher-wrapper">
+            <a href="#" data-i18n-switcher class="locale-switcher">UA</a>
+            <a href="#" data-i18n-switcher class="locale-switcher">EN</a>
+          </div>
+
+<!--          <select data-i18n-switcher class="locale-switcher">-->
+<!--            <option value="en">English</option>-->
+<!--            <option value="ua">Українська</option>-->
+<!--          </select>-->
         </li>
       </ul>
     </div>
@@ -381,7 +386,7 @@
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="step-item--info-box">
-                      <h4 data-i18n-key="step2-question-1">Do people pay for it?</h4>
+                      <h4 data-i18n-key="step2-question-2">Do people pay for it?</h4>
                       <p data-i18n-key="step2-answer-2">Customers pay to enter a competition. Even though customers pay a fraction of price of your product, the prize is bought from the entry-fee pool of the competition, so you receive a full-priced sale.</p>
                       <div class="step-item--info-box-decore"><span>?</span></div>
                     </div>
@@ -540,11 +545,11 @@
 
           <div class="form-group mc-field-group">
             <label for="mce-FNAME" style="display:none">First Name </label>
-            <input type="text" value="" name="FNAME" class="form-control" placeholder="Your name" id="mce-FNAME">
+            <input type="text" value="" name="FNAME" class="form-control" data-i18n-placeholder="form-input-name" placeholder="Your name" id="mce-FNAME">
           </div>
           <div class="form-group mc-field-group">
             <label for="mce-EMAIL" style="display:none">Email Address </label>
-            <input type="email" value="" name="EMAIL" class="required email form-control" placeholder="Enter your Email"
+            <input type="email" value="" name="EMAIL" class="required email form-control" data-i18n-placeholder="form-input-email" placeholder="Enter your Email"
               id="mce-EMAIL">
           </div>
 
@@ -639,25 +644,30 @@
             <!-- use class below for mobile -->
             <!-- justify-content-center  -->
             <li>
-              <a href="https://www.facebook.com/Compote-2307322546194439/">
+              <a href="https://www.facebook.com/Compote-2307322546194439/" target="_blank" rel="noopener noreferrer">
                 <img src="/images/facebook.png" class="footer-img d-inline-block align-top" alt="Facebook">
               </a>
             </li>
-            <!-- <li>
-              <a href="#!">
+            <li>
+              <a href="https://www.instagram.com/compote.app/" target="_blank" rel="noopener noreferrer">
                 <img src="/images/instagram.png" class="footer-img d-inline-block align-top" alt="Instagram">
               </a>
             </li>
             <li>
-              <a href="#!">
-                <img src="/images/linkedin.png" class="footer-img d-inline-block align-top" alt="LinkedIn">
+              <a href="https://telegram.me/CompoteApp" target="_blank" rel="noopener noreferrer">
+                <img src="/images/telegram.jpg" class="footer-img d-inline-block align-top" alt="Telegram">
               </a>
             </li>
-            <li>
-              <a href="#!">
-                <img src="/images/twitter.png" class="footer-img d-inline-block align-top" alt="Twitter">
-              </a>
-            </li> -->
+<!--            <li>-->
+<!--              <a href="#!">-->
+<!--                <img src="/images/linkedin.png" class="footer-img d-inline-block align-top" alt="LinkedIn">-->
+<!--              </a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="#!">-->
+<!--                <img src="/images/twitter.png" class="footer-img d-inline-block align-top" alt="Twitter">-->
+<!--              </a>-->
+<!--            </li>-->
           </ul>
         </div>
       </div>

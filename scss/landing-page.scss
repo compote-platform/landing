@@ -1,3 +1,40 @@
+@font-face {
+    font-family: 'Avenir Roman';
+    src: url('../fonts/Avenir/AvenirNextCyr-Regular.ttf') format('truetype');
+    src: url('../fonts/Avenir/AvenirNextCyr-Regular.eot');
+    src: local('Avenir Next Cyr Regular'), local('../fonts/Avenir/AvenirNextCyr-Regular'),
+    url('../fonts/Avenir/AvenirNextCyr-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Avenir/AvenirNextCyr-Regular.woff') format('woff'),
+    url('../fonts/Avenir/AvenirNextCyr-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Avenir Medium';
+    src: url('../fonts/Avenir/AvenirNextCyr-Medium.ttf') format('truetype');
+    src: url('../fonts/Avenir/AvenirNextCyr-Medium.eot');
+    src: local('Avenir Next Cyr Medium'), local('../fonts/Avenir/AvenirNextCyr-Medium'),
+    url('../fonts/Avenir/AvenirNextCyr-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Avenir/AvenirNextCyr-Medium.woff') format('woff'),
+    url('../fonts/Avenir/AvenirNextCyr-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Avenir Heavy';
+    src: url('../fonts/Avenir/AvenirNextCyr-Heavy.ttf') format('truetype');
+    src: url('../fonts/Avenir/AvenirNextCyr-Heavy.eot');
+    src: local('Avenir Next Cyr Heavy'), local('../fonts/Avenir/AvenirNextCyr-Heavy'),
+    url('../fonts/Avenir/AvenirNextCyr-Heavy.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Avenir/AvenirNextCyr-Heavy.woff') format('woff'),
+    url('../fonts/Avenir/AvenirNextCyr-Heavy.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Avenir Black';
+    src: url('../fonts/Avenir/AvenirNextCyr-Bold.ttf') format('truetype');
+    src: url('../fonts/Avenir/AvenirNextCyr-Bold.eot');
+    src: local('Avenir Next Cyr Bold'), local('../fonts/Avenir/AvenirNextCyr-Bold'),
+    url('../fonts/Avenir/AvenirNextCyr-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Avenir/AvenirNextCyr-Bold.woff') format('woff'),
+    url('../fonts/Avenir/AvenirNextCyr-Bold.ttf') format('truetype');
+}
+
 @import "_variables.scss";
 @import "_utility.scss";
 @import "_colors.scss";

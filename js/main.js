@@ -32,11 +32,27 @@ async function fetchTranslationsFor(newLocale) {
 }
 
 function bindLocaleSwitcher(initialValue) {
-	const switcher = document.querySelector("[data-i18n-switcher]");
-	switcher.value = initialValue;
-	switcher.onchange = (e) => {
-		setLocale(e.target.value);
-	};
+	const switchers = document.querySelectorAll("[data-i18n-switcher]");
+	switchers.forEach(item => {
+		const value = item.innerText.toLowerCase();
+
+		if (value === initialValue) {
+			switchers.forEach(item => item.classList.remove('-active'));
+			item.classList.add('-active');
+		}
+
+		item.addEventListener('click', function(e) {
+			setLocale(value);
+			switchers.forEach(item => item.classList.remove('-active'));
+			item.classList.add('-active');
+		});
+	});
+
+
+	// switcher.value = initialValue;
+	// switcher.onchange = (e) => {
+	// 	setLocale(e.target.value);
+	// };
 }
 
 function translatePage() {
@@ -64,7 +80,7 @@ function translatePlaceholder(element) {
 }
 
 function translateValue(element) {
-	const key = element.getAttribute("data-i18n-placeholder");
+	const key = element.getAttribute("data-i18n-value");
 	const translation = translations[key];
 
 	if (translation) {
