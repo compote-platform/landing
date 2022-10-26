@@ -2,7 +2,8 @@
 body {
   // background: linear-gradient($watermelon, #2174a6) !important;
   // background-color: $watermelon;
-  font-family: 'Avenir Roman', sans-serif;
+  font-family: "Avenir", sans-serif;
+  font-weight: 400;
 }
 // desktop
 .top-background {
@@ -46,14 +47,16 @@ body {
   }
 
   .row {
-    font-family: 'Avenir Medium', sans-serif;
+    font-family: "Avenir", sans-serif;
+    font-weight: 600;
     font-size: 15px;
     line-height: 21px;
     color: $white;
   }
 
   .footer-link {
-    font-family: 'Avenir Book', sans-serif;
+    font-family: "Avenir", sans-serif;
+    font-weight: 600;
     font-size: 15px;
     line-height: 21px;
     color: $white;
@@ -151,7 +154,8 @@ body {
   }
 
   .card-title {
-    font-family: 'Avenir Black', sans-serif;
+    font-family: "Avenir", sans-serif;
+    font-weight: 800;
     font-size: 18px;
     line-height: 20px;
     letter-spacing: 0.22px;
@@ -198,7 +202,8 @@ body {
   @extend .opaque-no-border;
 
   .card-text {
-    font-family: 'Avenir Medium', sans-serif;
+    font-family: "Avenir", sans-serif;
+    font-weight: 600;
     font-size: 18px;
     letter-spacing: 0.22px;
     line-height: 25px;
@@ -207,7 +212,8 @@ body {
   }
 
   .bold {
-    font-family: 'Avenir Black', sans-serif;
+    font-family: "Avenir", sans-serif;
+    font-weight: 800;
   }
 }
 
@@ -229,14 +235,16 @@ body {
 
     .card-title {
       text-transform: uppercase;
-      font-family: 'Avenir Black', sans-serif;
+      font-family: "Avenir", sans-serif;
+      font-weight: 800;
       color: $textgray;
       letter-spacing: 0px;
       font-size: 15px;
     }
 
     .card-subtitle {
-      font-family: 'Avenir Black', sans-serif;
+      font-family: "Avenir", sans-serif;
+      font-weight: 800;
       color: $textgray;
       font-size: 25px;
       letter-spacing: 0px;
@@ -248,7 +256,8 @@ body {
   }
 
   .card-text {
-    font-family: 'Avenir Medium', sans-serif;
+    font-family: "Avenir", sans-serif;
+    font-weight: 600;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0px;
@@ -321,7 +330,8 @@ body {
 
 .about-us {
   text-transform: uppercase;
-  font-family: 'Avenir Black', sans-serif;
+  font-family: "Avenir", sans-serif;
+  font-weight: 800;
   font-size: 15px;
   line-height: 37px;
   letter-spacing: 1.18px;
@@ -331,7 +341,8 @@ body {
 
 .sign-up-for-a-closed-beta {
   text-transform: uppercase;
-  font-family: 'Avenir Black', sans-serif;
+  font-family: "Avenir", sans-serif;
+  font-weight: 800;
   font-size: 15px;
   letter-spacing: 0.18px;
   line-height: 37px;
@@ -349,7 +360,8 @@ body {
 }
 
 .marketing-title {
-  font-family: 'Avenir Black', sans-serif;
+  font-family: "Avenir", sans-serif;
+  font-weight: 800;
   font-size: 40px;
   letter-spacing: 0.8px;
   line-height: 55px;
@@ -479,7 +491,8 @@ body {
   }
 
   .marketing-text {
-    font-family: 'Avenir Medium', sans-serif;
+    font-family: "Avenir", sans-serif;
+    font-weight: 600;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0px;
@@ -502,7 +515,8 @@ body {
   }
 
   .form-group {
-    font-family: 'Avenir Roman', sans-serif;
+    font-family: "Avenir", sans-serif;
+    font-weight: 400;
     font-size: 18px;
     line-height: 20px;
     letter-spacing: 0.36px;
@@ -532,7 +546,8 @@ body {
   margin-top: 50px;
 
   .marketing-text {
-    font-family: 'Avenir Medium', sans-serif;
+    font-family: "Avenir", sans-serif;
+    font-weight: 600;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0px;
@@ -552,7 +567,8 @@ body {
   .form-group {
     padding-right: 20px;
 
-    font-family: 'Avenir Roman', sans-serif;
+    font-family: "Avenir", sans-serif;
+    font-weight: 400;
     font-size: 18px;
     line-height: 20px;
     letter-spacing: 0.36px;
@@ -640,7 +656,8 @@ body {
 
   .welcome-container {
     .marketing-title {
-      font-family: 'Avenir Black', sans-serif;
+      font-family: "Avenir", sans-serif;
+      font-weight: 800;
       font-size: 28px;
       letter-spacing: 0px;
       line-height: 40px;

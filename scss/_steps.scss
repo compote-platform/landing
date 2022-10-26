@@ -87,7 +87,8 @@
   }
 
   p {
-    font-family: 'Avenir Roman', sans-serif;
+    font-family: "Avenir", sans-serif;
+    font-weight: 400;
     font-size: 15px;
     font-style: normal;
     line-height: 1.4;
@@ -125,7 +126,8 @@
 
   &--title {
     font-size: 100px;
-    font-family: 'Avenir Black', sans-serif;
+    font-family: "Avenir", sans-serif;
+    font-weight: 800;
     line-height: 1;
     letter-spacing: normal;
     color: #c6d3df;
@@ -173,7 +175,8 @@
     }
 
     h3 {
-      font-family: 'Avenir Black', sans-serif;
+      font-family: "Avenir", sans-serif;
+      font-weight: 800;
       font-size: 25px;
       line-height: normal;
       letter-spacing: normal;
@@ -217,7 +220,8 @@
     }
 
     h4 {
-      font-family: 'Avenir Black', sans-serif;
+      font-family: "Avenir", sans-serif;
+      font-weight: 800;
       font-size: 15px;
       line-height: 1.4;
       letter-spacing: normal;
