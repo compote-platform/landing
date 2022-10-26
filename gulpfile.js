@@ -30,7 +30,10 @@ function browserSync(done) {
         server: {
             baseDir: "./"
         },
-        port: 3000
+        port: 3000,
+        // tunnel: true,
+        // online: true,
+        // logLevel: "debug"
     });
     done();
 }
