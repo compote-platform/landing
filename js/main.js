@@ -134,3 +134,56 @@ function eraseCookie(name) {
 	document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
+//bot token
+const telegram_bot_id = "5841191587:AAGWR4tTOUjstc3jjtgkn7PDE6XSE4A8VY0";
+//chat id
+const chat_ids = [1853185, 1128247097];
+let name, email, message;
+const ready = function (form) {
+	name = form.querySelector("input[name='name']").value;
+	email = form.querySelector("input[name='email']").value;
+	message = "You have a new form submission on the website!\nName: " + name + "\nEmail: " + email + "\n";
+	console.log('message', message);
+};
+
+const formSender = function (form) {
+	ready(form);
+
+	chat_ids.forEach((chat_id) => {
+		var settings = {
+			"async": true,
+			"crossDomain": true,
+			"url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+			"method": "POST",
+			"headers": {
+				"Content-Type": "application/json",
+				"cache-control": "no-cache"
+			},
+			"data": JSON.stringify({
+				"chat_id": chat_id,
+				"text": message
+			})
+		};
+		$.ajax(settings).done(function (response) {
+			form.querySelector('.response-message').style.display = 'none';
+
+			if (response.ok) {
+				form.querySelector('.response-success').style.display = 'block';
+			} else {
+				form.querySelector('.response-error').style.display = 'block';
+			}
+		});
+	});
+
+	form.querySelector("input[name='name']").value = "";
+	form.querySelector("input[name='email']").value = "";
+	return false;
+};
+
+document.querySelectorAll('form[name="mc-embedded-subscribe-form"]').forEach((form) => {
+	form.addEventListener('submit', (e) => {
+		e.preventDefault();
+		formSender(e.currentTarget);
+	});
+})
+

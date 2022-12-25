@@ -58,10 +58,10 @@
         }
       }, { threshold: [1] });
 
-      var emailHeaderInput = document.getElementsByName("EMAIL")[0];
-      var nameHeaderInput = document.getElementsByName("FNAME")[0];
-      var emailInput = document.getElementsByName("EMAIL")[1];
-      var nameInput = document.getElementsByName("FNAME")[1];
+      var emailHeaderInput = document.getElementsByName("email")[0];
+      var nameHeaderInput = document.getElementsByName("name")[0];
+      var emailInput = document.getElementsByName("email")[1];
+      var nameInput = document.getElementsByName("name")[1];
       var formHeader = document.getElementsByName("mc-embedded-subscribe-form")[0];
       var form = document.getElementsByName("mc-embedded-subscribe-form")[1];
 
@@ -156,45 +156,39 @@
       <!-- Devices preview card -->
       <div class="col devices-image-card">
         <div class="card-body">
-<!--          <img class="card-img" src="/images/devices.png" alt="Devices Preview">-->
-<!-- Sounds interesting give it a try Mailchimp -->
           <div class="text-center no-gutters sounds-interesting-header">
             <h1 class="marketing-title-condensed" data-i18n-key="form-title">
               Sounds <span class="midblue">interesting</span>?<br/>Join <span class="watermelon">now</span>!
             </h1>
             <p class="marketing-text"><s data-i18n-key="form-price">$24.99/mo</s> <span class="watermelon" data-i18n-key="form-price-text">FREE for a limited time</span>!</p>
-            <!-- Begin Mailchimp Signup Form -->
+            <!-- Begin Signup Form -->
             <div id="mc_embed_signup-header">
               <form class="form-inline flex-column justify-content-center validate"
-                    action="https://xyz.us3.list-manage.com/subscribe/post?u=7cba3ecee76b3d8e76877d74c&amp;id=12c162534c"
-                    method="post" id="mc-embedded-subscribe-form-header" name="mc-embedded-subscribe-form"
-                    target="_blank" novalidate>
-                <!-- <div id="mc_embed_signup_scroll" style="display: inline;"> -->
-
+                    name="mc-embedded-subscribe-form"
+                    action=""
+                    method="post">
                 <div class="form-group mc-field-group">
-                  <label for="mce-FNAME" style="display:none">First Name </label>
-                  <input type="text" value="" name="FNAME" class="form-control" data-i18n-placeholder="form-input-name" placeholder="Your name" id="mce-FNAME">
+                  <label for="form1-name" style="display:none">First Name </label>
+                  <input type="text" value="" name="name" class="form-control" data-i18n-placeholder="form-input-name" placeholder="Your name" id="form1-name" required>
                 </div>
                 <div class="form-group mc-field-group">
-                  <label for="mce-EMAIL" style="display:none">Email Address </label>
-                  <input type="email" value="" name="EMAIL" class="required email form-control" data-i18n-placeholder="form-input-email" placeholder="Enter your Email"
-                         id="mce-EMAIL">
+                  <label for="form1-email" style="display:none">Email Address </label>
+                  <input type="email" value="" name="email" class="required email form-control" data-i18n-placeholder="form-input-email" placeholder="Enter your Email" id="form1-email" required>
                 </div>
 
-                <div id="mce-responses" class="clear">
-                  <div class="response" id="mce-error-response" style="display:none"></div>
-                  <div class="response" id="mce-success-response" style="display:none"></div>
+                <div class="form-group mc-field-group response-message response-success" data-i18n-key="response-success">
+                  Your info has been sent!
                 </div>
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                                                                                          name="b_7cba3ecee76b3d8e76877d74c_12c162534c" tabindex="-1" value=""></div>
 
-                <div class="clear"><input type="submit" value="sign up for free" data-i18n-value="sign-up" name="subscribe" id="mc-embedded-subscribe-header"
-                                          class="button btn sign-up-for-a-closed-beta-watermelon"></div>
-                <!-- </div> -->
+                <div class="form-group mc-field-group response-message response-error" data-i18n-key="response-error">
+                  Something wrong, try again later!
+                </div>
+
+                <div class="clear">
+                  <input type="submit" value="sign up for free" data-i18n-value="sign-up" name="subscribe" class="button btn sign-up-for-a-closed-beta-watermelon">
+                </div>
               </form>
             </div>
-            <!--End mc_embed_signup-->
           </div>
         </div>
       </div>
@@ -534,36 +528,32 @@
         Sounds <span class="midblue">interesting</span>?<br/>Join <span class="watermelon">now</span>!
       </h1>
       <p class="marketing-text"><s data-i18n-key="form-price">$24.99/mo</s> <span class="watermelon" data-i18n-key="form-price-text">FREE for a limited time</span>!</p>
-      <!-- Begin Mailchimp Signup Form -->
+      <!-- Begin Signup Form -->
       <div id="mc_embed_signup">
         <form class="form-inline justify-content-center validate"
-          action="https://xyz.us3.list-manage.com/subscribe/post?u=7cba3ecee76b3d8e76877d74c&amp;id=12c162534c"
-          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-          target="_blank" novalidate>
-          <!-- <div id="mc_embed_signup_scroll" style="display: inline;"> -->
-
-
+              name="mc-embedded-subscribe-form"
+              action=""
+              method="post">
           <div class="form-group mc-field-group">
-            <label for="mce-FNAME" style="display:none">First Name </label>
-            <input type="text" value="" name="FNAME" class="form-control" data-i18n-placeholder="form-input-name" placeholder="Your name" id="mce-FNAME">
+            <label for="form2-name" style="display:none">First Name </label>
+            <input type="text" value="" name="name" class="form-control" data-i18n-placeholder="form-input-name" placeholder="Your name" id="form2-name" required>
           </div>
           <div class="form-group mc-field-group">
-            <label for="mce-EMAIL" style="display:none">Email Address </label>
-            <input type="email" value="" name="EMAIL" class="required email form-control" data-i18n-placeholder="form-input-email" placeholder="Enter your Email"
-              id="mce-EMAIL">
+            <label for="form2-email" style="display:none">Email Address </label>
+            <input type="email" value="" name="email" class="required email form-control" data-i18n-placeholder="form-input-email" placeholder="Enter your Email" id="form2-email" required>
           </div>
 
-          <div id="mce-responses" class="clear">
-            <div class="response" id="mce-error-response" style="display:none"></div>
-            <div class="response" id="mce-success-response" style="display:none"></div>
+          <div class="form-group mc-field-group response-message response-success" data-i18n-key="response-success">
+            Your info has been sent!
           </div>
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-              name="b_7cba3ecee76b3d8e76877d74c_12c162534c" tabindex="-1" value=""></div>
 
-          <div class="clear"><input type="submit" value="sign up for free" data-i18n-value="sign-up" name="subscribe" id="mc-embedded-subscribe"
-              class="button btn sign-up-for-a-closed-beta-watermelon"></div>
-          <!-- </div> -->
+          <div class="form-group mc-field-group response-message response-error" data-i18n-key="response-error">
+            Something wrong, try again later!
+          </div>
+
+          <div class="clear">
+            <input type="submit" value="sign up for free" data-i18n-value="sign-up" name="subscribe" class="button btn sign-up-for-a-closed-beta-watermelon">
+          </div>
         </form>
       </div>
       <!--End mc_embed_signup-->
@@ -585,12 +575,6 @@
     </div> -->
 
   </div>
-
-
-
-  <!-- <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script> -->
-  <script
-    type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
 
   <!-- Footer -->
   <footer class="page-footer footer-background">
